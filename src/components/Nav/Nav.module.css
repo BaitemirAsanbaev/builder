@@ -1,0 +1,22 @@
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 300px;
+}
+.navbtns{
+    background: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: 'Jura';
+    font-weight: 400;
+    font-size: 36px;
+    text-shadow: 0 0 22px red;
+    padding: 20px 35px;
+    transition: color 1s, font-size 1s;
+}
+.navbtns:hover{
+    font-size: 38px;
+    color: rgb(255, 126, 126);
+}
