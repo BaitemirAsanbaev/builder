@@ -1,7 +1,8 @@
 .Toolbar{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 5px 10px;
+    padding: 5px 20px;
     color: #fff;
     background-color: #1a1a1a;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);

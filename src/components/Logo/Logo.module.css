@@ -1,7 +1,8 @@
 .Logo{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    flex: 0 1 550px;
 }
 .title{
     font-size: 64px;
@@ -9,7 +10,4 @@
     font-family: 'Jura';
     font-weight: 400;
     margin: 0px;
-}
-.logoImg{
-
 }
