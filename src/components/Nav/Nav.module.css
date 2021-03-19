@@ -17,6 +17,6 @@
     transition: color 1s, font-size 1s;
 }
 .navbtns:hover{
-    font-size: 38px;
+    font-size: 28px;
     color: rgb(255, 126, 126);
 }

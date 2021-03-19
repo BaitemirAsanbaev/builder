@@ -1,4 +1,4 @@
-.Drawer{
+.Drawer .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,4 +12,11 @@
     top: 0;
     left: 0;
     font-size: 23px;
+    transition: transform 2s;
+}
+.open{
+    transform: translateX(0);
+}
+.close{
+    transform: translateX(-300px);
 }
