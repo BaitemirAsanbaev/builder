@@ -16,3 +16,11 @@
         display: none;
     }
 }
+@media (max-width: 700px){
+    .Toolbar{
+        font-size: 16px;
+    }
+    .Toolbar .logoDiv img{
+        display: none;
+    }
+}
