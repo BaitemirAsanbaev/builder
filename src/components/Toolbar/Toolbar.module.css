@@ -11,3 +11,8 @@
     left: 0;
     font-size: 34px;
 }
+@media (max-width: 899px){
+    .Toolbar nav{
+        display: none;
+    }
+}

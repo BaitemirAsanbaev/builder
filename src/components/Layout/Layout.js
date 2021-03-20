@@ -5,13 +5,12 @@ import { useState } from "react";
 
 const Layout = () => {
 
-    const [drowerOpen, setdrawerOpen] = useState(false);
+    const [drawerOpen, setDrawerOpen] = useState(false);
 
     return ( 
         <div className = {classes.Layout}>
-            
-            <Toolbar openDrawer = {() => {setdrawerOpen(true)}}/>
-            <Drawer open = {drowerOpen} closeDrawer={() => setdrawerOpen(false)}/>
+            <Toolbar openDrawer={() => setDrawerOpen(true)} />
+            <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
         </div>
      );
 }
