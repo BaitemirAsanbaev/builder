@@ -11,6 +11,7 @@ const Notes = ({type, fixed}) => {
         g: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(123px) translateX(100px)',},
         a: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(100px) translateX(100px)',},
         b: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(80px) translateX(100px)',},
+        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '10px 15px', transform: 'translateY(123px) translateX(100px)',},
     }
     
     return ( 
