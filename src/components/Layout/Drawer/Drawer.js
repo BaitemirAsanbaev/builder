@@ -1,8 +1,8 @@
-import Logo from "../Logo/Logo";
-import Nav from "../Nav/Nav";
-import Backdrop from "../UI/Backdrop/Backdrop";
-import classes from "./Drawer.module.css";
 
+import Nav from "../../Nav/Nav";
+import Logo from "../../UI/Logo/Logo";
+import classes from "./Drawer.module.css";
+import Backdrop from "../../UI/Backdrop/Backdrop"
 const Drawer = ({open, closeDrawer}) => {
     const drawerClasses = [
         classes.content,
