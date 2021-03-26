@@ -9,7 +9,8 @@
     align-items: center;
 }
 .sheet{
+    display: flex;
+    flex-wrap: wrap;
     width: 680px;
     height: 250px;
-    position: relative;
 }

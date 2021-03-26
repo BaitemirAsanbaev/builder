@@ -1,7 +1,7 @@
 import classes from "./NotesPreview.module.css";
 import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
-
+    
     const NotesPreview = ({notes}) =>{
         const result = []
         for (const note in notes) {

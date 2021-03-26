@@ -1,14 +1,14 @@
 import classes from "./NotesControls.module.css";
 import NoteControl from "./NoteControl/NoteControl";
 
-const NotesControls = ({addNote, removeNote, note}) => {
+const NotesControls = ({addNote, removeNote, notes}) => {
     const result = [];
-    for(const item in note){
+    for(const note in notes){
         result.push(<NoteControl
-            key = {item}
+            key = {note}
             add = {addNote}
             remove = {removeNote}
-            type = {item}
+            type = {note}
         />)
     }
     return ( 
