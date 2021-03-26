@@ -19,7 +19,6 @@ const Content = () => {
         newNote[type]++;
         setNotes(newNote);
     }
-
     function removeNote(type){
         const newNote = { ...notes };
         newNote[type]--;
