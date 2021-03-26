@@ -4,14 +4,14 @@ import React from 'react'
 
 const Notes = ({type, fixed}) => {
     const types = {
-        c: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(200px) translateX(100px)', },
-        d: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(180px) translateX(100px)',},
-        e: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(165px) translateX(100px)',},
-        f: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(140px) translateX(100px)',},
-        g: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(123px) translateX(100px)',},
-        a: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(100px) translateX(100px)',},
-        b: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(80px) translateX(100px)',},
-        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '10px 15px', transform: 'translateY(123px) translateX(100px)',},
+        c: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(151px)'},
+        d: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(131px)'},
+        e: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(111px)'},
+        f: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(91px)'},
+        g: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(71px)'},
+        a: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(51px)'},
+        b: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(30px)'},
+        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '10px 15px', transform: 'translateY(123px)'}
     }
     
     return ( 

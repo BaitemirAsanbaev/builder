@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .5rem 0;
+    margin: 1rem 0;
 }
 .note {
     position: static;
-    margin: 0 .5rem;
+    margin: 0 2rem;
     height: 40px;
     width: 40px;
     font-family: 'Jura';
