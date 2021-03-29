@@ -4,14 +4,6 @@ import NotesControls from "./NotesControls/NotesControls"
 import { useState } from "react";
 const Content = () => {
     const [notes, setNotes] = useState ([
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'a',
-        'b',
-        'p',
     ]);
 
     function addNote(type){
