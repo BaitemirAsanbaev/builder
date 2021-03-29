@@ -5,9 +5,7 @@ import Notes from "../Notes/Notes"
     const NotesPreview = ({notes}) =>{
         const result = []
         for (const note in notes) {
-            for (let i = 0; i < notes[note]; i++){
-                result.push(<Notes key = {note + i} type = {note}/>)
-            }
+                result.push(<Notes key = {notes[note] + note} type = {notes[note]}/>)
         }
     return ( 
         <div className = {classes.NotesPreview}>
