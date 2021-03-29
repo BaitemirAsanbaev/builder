@@ -32,6 +32,8 @@ const NoteControl = ({add, remove, type}) => {
         case 'b':
           relAudio.src = b;
           break;
+        default://impossible
+          console.log("how the fuck you did this?")
       }
       relAudio.play();
     }
