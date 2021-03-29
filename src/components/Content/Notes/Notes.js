@@ -2,7 +2,7 @@ import classes from "./Notes.module.css";
 import note from "../../../images/note.png"
 import React from 'react'
 
-const Notes = ({type, fixed}) => {
+const Notes = ({type}) => {
     const types = {
         c: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(151px)'},
         d: {backgroundImage: `url(${note})`, width: '55px', height: '55px', margin: '10px 15px', transform: 'translateY(131px)'},

@@ -1,5 +1,6 @@
 .NotesControls{
     flex: 0 0 350px;
+    height: 550px;
     border-radius: 1rem;
     padding: 1rem;
     background-color: #1a1a1a;
