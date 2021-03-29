@@ -14,11 +14,6 @@ import Notes from "../Notes/Notes"
                 style = {{backgroundImage: `url(${sheet})`}}>
                 {result}
             </div>
-            <div
-                className = {classes.sheet}
-                style = {{backgroundImage: `url(${sheet})`}}>
-                {result}
-            </div>
         </div>
      );
     }
