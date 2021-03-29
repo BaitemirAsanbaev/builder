@@ -10,7 +10,7 @@ import React from 'react'
 
 const Notes = ({type}) => {
     const types = {
-        c: {backgroundImage: `url(${c})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72x)'},
+        c: {backgroundImage: `url(${c})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         d: {backgroundImage: `url(${d})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         e: {backgroundImage: `url(${e})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         f: {backgroundImage: `url(${f})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
