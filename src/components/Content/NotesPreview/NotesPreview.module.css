@@ -13,6 +13,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 663px;
-    height: 170px;
+    min-height: 300px;
     margin-bottom: 150px;
 }

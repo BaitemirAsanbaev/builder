@@ -10,14 +10,14 @@ import React from 'react'
 
 const Notes = ({type}) => {
     const types = {
-        c: {backgroundImage: `url(${c})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        d: {backgroundImage: `url(${d})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        e: {backgroundImage: `url(${e})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        f: {backgroundImage: `url(${f})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        g: {backgroundImage: `url(${g})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        a: {backgroundImage: `url(${a})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        b: {backgroundImage: `url(${b})`, width: '55px', height: '220px', margin: '10px 15px', transform: 'translateY(-10px)'},
-        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '10px 15px', transform: 'translateY(123px)'}
+        c: {backgroundImage: `url(${c})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72x)'},
+        d: {backgroundImage: `url(${d})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        e: {backgroundImage: `url(${e})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        f: {backgroundImage: `url(${f})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        g: {backgroundImage: `url(${g})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        a: {backgroundImage: `url(${a})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        b: {backgroundImage: `url(${b})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
+        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '0px 15px', transform: 'translateY(123px)'}
     }
     
     return ( 
