@@ -1,5 +1,6 @@
 import classes from "./NotesControls.module.css";
 import NoteControl from "./NoteControl/NoteControl";
+import Switch from "./Switch/Switch";
 
 const NotesControls = ({addNote, removeNote}) => {
     const result = [];
@@ -23,6 +24,7 @@ const NotesControls = ({addNote, removeNote}) => {
     }
     return ( 
         <div className = {classes.NotesControls}>
+            <Switch/>
             {result}
         </div>
      );
