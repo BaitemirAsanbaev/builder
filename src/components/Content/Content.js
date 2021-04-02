@@ -4,16 +4,18 @@ import NotesControls from "./NotesControls/NotesControls"
 import { useState } from "react";
 const Content = () => {
     const [notes, setNotes] = useState ([
-    ]);
 
+    ]);
+    const [tone, setTone] = useState (" ");
+    
     function addNote(type){
         const newNote = [...notes]
-        newNote.push(type)
+        newNote.push(type + tone)
         setNotes(newNote)
     }
     function removeNote(type){ 
         const newNote = [...notes]
-        const index = newNote.lastIndexOf(type);
+        const index = newNote.lastIndexOf(type + tone);
         if (index !== -1) {
           newNote.splice(index, 1);
         }
@@ -25,6 +27,7 @@ const Content = () => {
             <NotesControls 
                 addNote = {addNote}
                 removeNote = {removeNote}
+                setTone = {setTone}
                 />
         </div>
      );
