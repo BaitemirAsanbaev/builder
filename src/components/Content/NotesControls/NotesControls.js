@@ -21,6 +21,7 @@ const NotesControls = ({addNote, removeNote, tone, switchTone}) => {
             add = {addNote}
             remove = {removeNote}
             type = {notes[note] + tone}
+            tone = {tone}
         />)
     }
     return ( 
