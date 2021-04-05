@@ -1,12 +1,11 @@
 import classes from "./NotesControls.module.css";
 import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
-import { useState } from "react";
 
-const NotesControls = ({addNote, removeNote, setTone}) => {
+const NotesControls = ({addNote, removeNote, tone, switchTone}) => {
 
     const result = [];
-    const [notes, setNotes] = useState([
+    const notes = [
         'c',
         'd',
         'e',
@@ -15,18 +14,20 @@ const NotesControls = ({addNote, removeNote, setTone}) => {
         'a',
         'b',
         'p',
-    ]);
+    ];
     for(const note in notes){
         result.push(<NoteControl
             key = {notes[note]}
             add = {addNote}
             remove = {removeNote}
-            type = {notes[note]}
+            type = {notes[note] + tone}
         />)
     }
     return ( 
         <div className = {classes.NotesControls}>
-            <Switch setTone = {setTone}/>
+            <Switch
+                tone = {tone}
+                switchTone = {switchTone}/>
             {result}
         </div>
      );

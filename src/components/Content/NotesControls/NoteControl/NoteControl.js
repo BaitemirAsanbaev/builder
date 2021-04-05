@@ -10,6 +10,7 @@ const NoteControl = ({add, remove, type}) => {
     function play(note){
       let relAudio = new Audio();
       relAudio.preload ='auto';
+      
       switch(note){
         case 'c':
           relAudio.src = c;
@@ -33,9 +34,10 @@ const NoteControl = ({add, remove, type}) => {
           relAudio.src = b;
           break;
         default://impossible
-          console.log("how the fuck you did this?")
+          // console.log("how the fuck you did this?")
       }
       relAudio.play();
+      console.log(type)
     }
 
     return (<div className={classes.NoteControl}>

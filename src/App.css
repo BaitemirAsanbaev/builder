@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'Jura';
 }
 body{
     margin: 0;
