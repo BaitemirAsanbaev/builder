@@ -1,11 +1,18 @@
 import classes from "./NoteControl.module.css";
-import c from "../../../../audio/do.mp3";
-import d from "../../../../audio/re.mp3";
-import e from "../../../../audio/mi.mp3";
-import f from "../../../../audio/fa.mp3";
-import g from "../../../../audio/sol.mp3";
-import a from "../../../../audio/lja.mp3";
-import b from "../../../../audio/si.mp3";
+import c from "../../../../audio/c.mp3";
+import d from "../../../../audio/d.mp3";
+import e from "../../../../audio/e.mp3";
+import f from "../../../../audio/f.mp3";
+import g from "../../../../audio/g.mp3";
+import a from "../../../../audio/a.mp3";
+import b from "../../../../audio/b.mp3";
+import cd from "../../../../audio/cd.mp3";
+import dd from "../../../../audio/dd.mp3";
+import fd from "../../../../audio/fd.mp3";
+import gd from "../../../../audio/gd.mp3";
+import ad from "../../../../audio/ad.mp3";
+import bd from "../../../../audio/bd.mp3";
+import cb from "../../../../audio/cb.mp3";
 const NoteControl = ({add, remove, type, tone}) => {
     function play(note){
       let relAudio = new Audio();
@@ -32,6 +39,48 @@ const NoteControl = ({add, remove, type, tone}) => {
           break;
         case 'b':
           relAudio.src = b;
+          break
+        case 'cd':
+          relAudio.src = cd;
+          break;
+        case 'dd':
+          relAudio.src = dd;
+          break;
+        case 'ed':
+          relAudio.src = f;
+          break;
+        case 'fd':
+          relAudio.src = fd;
+          break;
+        case 'gd':
+          relAudio.src = gd;
+          break;
+        case 'ad':
+          relAudio.src = ad;
+          break;
+        case 'bd':
+          relAudio.src = bd; 
+          break
+        case 'cb':
+          relAudio.src = cb;
+          break;
+        case 'db':
+          relAudio.src = cd;
+          break;
+        case 'eb':
+          relAudio.src = dd;
+          break;
+        case 'fb':
+          relAudio.src = e;
+          break;
+        case 'gb':
+          relAudio.src = fd;
+          break;
+        case 'ab':
+          relAudio.src = gd;
+          break;
+        case 'bb':
+          relAudio.src = ad;
           break;
         default://impossible
           // console.log("how the fuck you did this?")
@@ -40,7 +89,7 @@ const NoteControl = ({add, remove, type, tone}) => {
       console.log(type)
     }
     let nota = type;
-    if(type.length == 2){
+    if(type.length === 2){
       nota = type.substring(0, type.length - 1)
     }
     return (<div className={classes.NoteControl}>
