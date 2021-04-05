@@ -14,6 +14,7 @@ import Notes from "../Notes/Notes"
                 style = {{backgroundImage: `url(${sheet})`}}>
                 {result}
             </div>
+            <div className = {classes.total}>{notes.length} notes in total</div>
         </div>
      );
     }
