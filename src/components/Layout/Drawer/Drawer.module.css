@@ -13,6 +13,7 @@
     left: 0;
     font-size: 23px;
     transition: transform 1s;
+    z-index: 2;
 }
 .open{
     transform: translateX(0);

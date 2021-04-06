@@ -10,6 +10,7 @@
     top: 0;
     left: 0;
     font-size: 34px;
+    z-index: 2;
 }
 @media (max-width: 899px){
     .Toolbar nav{
