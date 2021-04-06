@@ -1,12 +1,22 @@
 import classes from "./Content.module.css";
 import NotesPreview from "./NotesPreview/NotesPreview"
 import NotesControls from "./NotesControls/NotesControls"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 const Content = () => {
     
     const [notes, setNotes] = useState ([
 
     ]);
+
+    // useEffect(()=>{
+    //   axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/notes.json').then((response)=>{
+    //     const notes = response.data;
+    //     setNotes(Object.values(notes))
+    //   })
+    // }, [])
+
+
     const [tone, setTone] = useState ("");
 
 

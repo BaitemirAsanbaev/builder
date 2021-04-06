@@ -27,7 +27,6 @@ const NotesControls = ({addNote, removeNote, tone, switchTone}) => {
     return ( 
         <div className = {classes.NotesControls}>
             <Switch
-                tone = {tone}
                 switchTone = {switchTone}/>
             {result}
         </div>

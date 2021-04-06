@@ -1,12 +1,10 @@
 .NotesPreview{
     flex: 0 0 663px;
-    margin-right: 1rem;
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
     margin-bottom: 50px;
 }
 .sheet{
@@ -18,4 +16,44 @@
 }
 .total{
     font-size: 26px;
+}
+@media (min-width: 1040px){
+    .NotesPreview{
+        margin-right: 3rem;
+    }
+}
+@media (max-width: 780px){
+    .NotesPreview{
+        transform: scale(.8);
+    }
+}
+@media (max-width: 620px){
+    .NotesPreview{
+        transform: scale(.7);
+    }
+}
+@media (max-width: 510px){
+    .NotesPreview{
+        transform: scale(.6);
+        margin-top: -100px;
+        margin-bottom: 0px;
+    }
+    .sheet{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 445px){
+    .NotesPreview{
+        transform: scale(.5);
+    }
+}
+@media (max-width: 375px){
+    .NotesPreview{
+        transform: scale(.4);
+    }
+}
+@media (max-width: 300px){
+    .NotesPreview{
+        transform: scale(.3);
+    }
 }
