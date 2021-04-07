@@ -20,8 +20,8 @@ const Modal = ({ show, cancel, notes }) => {
             <input className={classes.compName} type="text" />
         </div>
         <div>
-          <Button onClick={cancel} modalButton>Create</Button>
-          <Button onClick={cancel} modalButton>Cancel</Button>
+          <Button onClick={cancel} modalButton green>Create</Button>
+          <Button onClick={cancel} modalButton red>Cancel</Button>
         </div>
       </div>
     </div>

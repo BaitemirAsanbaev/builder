@@ -9,6 +9,12 @@ const Button = (props) => {
   if(props.modalButton){
     className.push(classes.modalButton)
   }
+  if(props.green){
+    className.push(classes.green)
+  }
+  if(props.red){
+    className.push(classes.red)
+  }
   return (
     <button {...props} className={className.join(" ")}>{props.children}</button>
   );
