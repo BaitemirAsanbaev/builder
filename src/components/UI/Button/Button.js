@@ -6,6 +6,9 @@ const Button = (props) => {
   if(props.order){
     className.push(classes.order)
   }
+  if(props.modalButton){
+    className.push(classes.modalButton)
+  }
   return (
     <button {...props} className={className.join(" ")}>{props.children}</button>
   );
