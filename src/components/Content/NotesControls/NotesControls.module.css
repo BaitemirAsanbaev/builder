@@ -1,12 +1,13 @@
 .NotesControls{
     flex: 0 0 350px;
-    height: 580px;
+    height: 600px;
     border-radius: 1rem;
     padding: 1rem;
     background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 30px 60px;
+    transform: translateY(-50px);
   }
   @media(max-width: 445px){
     .NotesControls{

@@ -7,8 +7,15 @@
     font-size: 26px;
     cursor: pointer;
   }
+  .order{
+    padding: 5px 25px;
+    border-radius: 5px;
+  }
+  .order:not(:disabled){
+    box-shadow: 0 0 10px #ff020234;
+  }
   .Button:not(:disabled):hover {
-    background-color: rgb(102, 0, 0);
+    background-color: rgb(44, 0, 0);
   }
   .Button:focus {
     outline: none;

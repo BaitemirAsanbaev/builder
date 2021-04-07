@@ -3,12 +3,14 @@ import NotesPreview from "./NotesPreview/NotesPreview"
 import NotesControls from "./NotesControls/NotesControls"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Modal from "../UI/Modal/Modal";
 const Content = () => {
     
     const [notes, setNotes] = useState ([
 
     ]);
-
+    
+    const [ordering, setOrdering] = useState(false);
     // useEffect(()=>{
     //   axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/notes.json').then((response)=>{
     //     const notes = response.data;
@@ -41,6 +43,14 @@ const Content = () => {
         }
         setNotes(newNote);
       }
+    function startOrdering() {
+      setOrdering(true);
+    }
+  
+    function stopOrdering() {
+      setOrdering(false);
+    }
+
     return ( 
         <div className = {classes.Content}>
             <NotesPreview notes = {notes}/>
@@ -50,7 +60,11 @@ const Content = () => {
                 switchTone = {switchTone}
                 tone = {tone}
                 notesArray = {notes}
+                startOrdering = {startOrdering}
                 />
+            <Modal
+                show={ordering}
+                cancel={stopOrdering}>Hello</Modal>
         </div>
      );
 }
