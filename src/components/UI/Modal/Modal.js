@@ -12,7 +12,7 @@ const Modal = ({ show, cancel, notes }) => {
       <Backdrop show={show} click={cancel} />
       <div className={classes.content} style={style}>
           <div>
-              <h2>Great melody</h2>
+              <h2>Great melody!</h2>
               <span>{notes.length} notes</span>
           </div>
         <div>
