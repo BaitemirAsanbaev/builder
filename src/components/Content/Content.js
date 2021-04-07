@@ -9,12 +9,12 @@ const Content = () => {
 
     ]);
 
-    // useEffect(()=>{
-    //   axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/notes.json').then((response)=>{
-    //     const notes = response.data;
-    //     setNotes(Object.values(notes))
-    //   })
-    // }, [])
+    useEffect(()=>{
+      axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/notes.json').then((response)=>{
+        const notes = response.data;
+        setNotes(Object.values(notes))
+      })
+    }, [])
 
 
     const [tone, setTone] = useState ("");

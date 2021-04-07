@@ -8,3 +8,14 @@
     text-align: center;
     padding: 30px 60px;
   }
+  @media(max-width: 445px){
+    .NotesControls{
+      transform: scale(.7);
+    }
+  }
+  @media(max-width: 300px){
+    .NotesControls{
+      transform: scale(.5);
+      margin-top: -250px;
+    }
+  }

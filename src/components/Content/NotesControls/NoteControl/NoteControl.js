@@ -82,8 +82,7 @@ const NoteControl = ({add, remove, type, tone}) => {
         case 'bb':
           relAudio.src = ad;
           break;
-        default://impossible
-          // console.log("how the fuck you did this?")
+        default:
       }
       relAudio.play();
       console.log(type)
@@ -92,6 +91,7 @@ const NoteControl = ({add, remove, type, tone}) => {
     if(type.length === 2){
       nota = type.substring(0, type.length - 1)
     }
+    
     return (<div className={classes.NoteControl}>
       <button className={classes.more} onClick={() => {add(type); play(type)}}>+</button>
       <div className={classes.note}>{nota}</div>
