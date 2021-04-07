@@ -1,8 +1,9 @@
 import classes from "./NotesControls.module.css";
 import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
+import Button from "../../UI/Button/Button";
 
-const NotesControls = ({addNote, removeNote, tone, switchTone}) => {
+const NotesControls = ({addNote, removeNote, tone, switchTone, notesArray}) => {
 
     const result = [];
     const notes = [
@@ -29,6 +30,7 @@ const NotesControls = ({addNote, removeNote, tone, switchTone}) => {
             <Switch
                 switchTone = {switchTone}/>
             {result}
+            <Button disabled = {!notesArray.length}>Add</Button>
         </div>
      );
 }

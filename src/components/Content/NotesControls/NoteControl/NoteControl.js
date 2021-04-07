@@ -13,6 +13,7 @@ import gd from "../../../../audio/gd.mp3";
 import ad from "../../../../audio/ad.mp3";
 import bd from "../../../../audio/bd.mp3";
 import cb from "../../../../audio/cb.mp3";
+import Button from "../../../UI/Button/Button";
 const NoteControl = ({add, remove, type, tone}) => {
     function play(note){
       let relAudio = new Audio();
@@ -93,9 +94,9 @@ const NoteControl = ({add, remove, type, tone}) => {
     }
     
     return (<div className={classes.NoteControl}>
-      <button className={classes.more} onClick={() => {add(type); play(type)}}>+</button>
+      <Button className={classes.more} onClick={() => {add(type); play(type)}}>+</Button>
       <div className={classes.note}>{nota}</div>
-      <button className={classes.less} onClick={() => remove(type)}>-</button>
+      <Button className={classes.less} onClick={() => remove(type)}>-</Button>
     </div>);
 }
  
