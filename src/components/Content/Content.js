@@ -63,8 +63,9 @@ const Content = () => {
                 startOrdering = {startOrdering}
                 />
             <Modal
+            notes = {notes}
                 show={ordering}
-                cancel={stopOrdering}>Hello</Modal>
+                cancel={stopOrdering}></Modal>
         </div>
      );
 }
