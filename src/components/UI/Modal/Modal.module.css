@@ -11,6 +11,9 @@
   .compName{
       outline: none;
   }
+  .buttons{
+      margin-top: 50px;
+  }
   @media (max-width: 800px) {
     .content {
       width: 80%;

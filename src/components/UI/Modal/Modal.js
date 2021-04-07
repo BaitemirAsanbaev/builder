@@ -19,9 +19,9 @@ const Modal = ({ show, cancel, notes }) => {
             <h2>Name your composition</h2>
             <input className={classes.compName} type="text" />
         </div>
-        <div>
-          <Button onClick={cancel} modalButton green>Create</Button>
-          <Button onClick={cancel} modalButton red>Cancel</Button>
+        <div className={classes.buttons}>
+          <Button onClick={cancel} modalButton = {true} green = {true}>Create</Button>
+          <Button onClick={cancel} modalButton = {true} red = {true}>Cancel</Button>
         </div>
       </div>
     </div>
