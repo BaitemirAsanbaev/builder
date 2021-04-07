@@ -1,8 +1,7 @@
 import classes from "./Content.module.css";
 import NotesPreview from "./NotesPreview/NotesPreview"
 import NotesControls from "./NotesControls/NotesControls"
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import Modal from "../UI/Modal/Modal";
 const Content = () => {
     
