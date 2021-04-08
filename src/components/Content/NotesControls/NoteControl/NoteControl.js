@@ -14,90 +14,93 @@ import ad from "../../../../audio/ad.mp3";
 import bd from "../../../../audio/bd.mp3";
 import cb from "../../../../audio/cb.mp3";
 import Button from "../../../UI/Button/Button";
-const NoteControl = ({add, remove, type, tone}) => {
-    function play(note){
-      let relAudio = new Audio();
-      relAudio.preload ='auto';
-      
-      switch(note){
-        case 'c':
-          relAudio.src = c;
-          break;
-        case 'd':
-          relAudio.src = d;
-          break;
-        case 'e':
-          relAudio.src = e;
-          break;
-        case 'f':
-          relAudio.src = f;
-          break;
-        case 'g':
-          relAudio.src = g;
-          break;
-        case 'a':
-          relAudio.src = a;
-          break;
-        case 'b':
-          relAudio.src = b;
-          break
-        case 'cd':
-          relAudio.src = cd;
-          break;
-        case 'dd':
-          relAudio.src = dd;
-          break;
-        case 'ed':
-          relAudio.src = f;
-          break;
-        case 'fd':
-          relAudio.src = fd;
-          break;
-        case 'gd':
-          relAudio.src = gd;
-          break;
-        case 'ad':
-          relAudio.src = ad;
-          break;
-        case 'bd':
-          relAudio.src = bd; 
-          break
-        case 'cb':
-          relAudio.src = cb;
-          break;
-        case 'db':
-          relAudio.src = cd;
-          break;
-        case 'eb':
-          relAudio.src = dd;
-          break;
-        case 'fb':
-          relAudio.src = e;
-          break;
-        case 'gb':
-          relAudio.src = fd;
-          break;
-        case 'ab':
-          relAudio.src = gd;
-          break;
-        case 'bb':
-          relAudio.src = ad;
-          break;
-        default:
-      }
-      relAudio.play();
-      console.log(type)
+const NoteControl = ({ add, remove, type }) => {
+
+
+
+  function play(note) {
+    let relAudio = new Audio();
+    relAudio.preload = 'auto';
+
+    switch (note) {
+      case 'c':
+        relAudio.src = c;
+        break;
+      case 'd':
+        relAudio.src = d;
+        break;
+      case 'e':
+        relAudio.src = e;
+        break;
+      case 'f':
+        relAudio.src = f;
+        break;
+      case 'g':
+        relAudio.src = g;
+        break;
+      case 'a':
+        relAudio.src = a;
+        break;
+      case 'b':
+        relAudio.src = b;
+        break
+      case 'cd':
+        relAudio.src = cd;
+        break;
+      case 'dd':
+        relAudio.src = dd;
+        break;
+      case 'ed':
+        relAudio.src = f;
+        break;
+      case 'fd':
+        relAudio.src = fd;
+        break;
+      case 'gd':
+        relAudio.src = gd;
+        break;
+      case 'ad':
+        relAudio.src = ad;
+        break;
+      case 'bd':
+        relAudio.src = bd;
+        break
+      case 'cb':
+        relAudio.src = cb;
+        break;
+      case 'db':
+        relAudio.src = cd;
+        break;
+      case 'eb':
+        relAudio.src = dd;
+        break;
+      case 'fb':
+        relAudio.src = e;
+        break;
+      case 'gb':
+        relAudio.src = fd;
+        break;
+      case 'ab':
+        relAudio.src = gd;
+        break;
+      case 'bb':
+        relAudio.src = ad;
+        break;
+      default:
     }
-    let nota = type;
-    if(type.length === 2){
-      nota = type.substring(0, type.length - 1)
-    }
-    
-    return (<div className={classes.NoteControl}>
-      <Button className={classes.more} onClick={() => {add(type); play(type)}}>+</Button>
+    relAudio.play();
+    console.log(type)
+  }
+  let nota = type;
+  if (type.length === 2) {
+    nota = type.substring(0, type.length - 1)
+  }
+
+  return (<div className={classes.NoteControl}>
+      <Button className={classes.more} onClick={() => { add(type); play(type) }}>+</Button>
       <div className={classes.note}>{nota}</div>
       <Button className={classes.less} onClick={() => remove(type)}>-</Button>
-    </div>);
+  </div>);
 }
- 
+
 export default NoteControl;

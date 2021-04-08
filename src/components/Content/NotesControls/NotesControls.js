@@ -22,7 +22,7 @@ const NotesControls = ({addNote, removeNote, tone, switchTone, notesArray, start
             add = {addNote}
             remove = {removeNote}
             type = {notes[note] + tone}
-            tone = {tone}
+            notes = {notes}
         />)
     }
     return ( 
@@ -30,7 +30,7 @@ const NotesControls = ({addNote, removeNote, tone, switchTone, notesArray, start
             <Switch
                 switchTone = {switchTone}/>
             {result}
-            <Button disabled = {!notesArray.length} onClick ={startOrdering} order>Order</Button>
+            <Button disabled = {!notesArray.length} onClick ={startOrdering} order = {true}>Order</Button>
         </div>
      );
 }
