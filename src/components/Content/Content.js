@@ -42,6 +42,13 @@ const Content = () => {
         }
         setNotes(newNote);
       }
+      function removeAllNote(){ 
+        const newNote = [...notes]
+        if (newNote.length !== -1) {
+          newNote.splice(-1, 1);
+        }
+        setNotes(newNote);
+      }
     function startOrdering() {
       setOrdering(true);
     }
@@ -56,6 +63,7 @@ const Content = () => {
             <NotesControls 
                 addNote = {addNote}
                 removeNote = {removeNote}
+                removeAllNote = {removeAllNote}
                 switchTone = {switchTone}
                 tone = {tone}
                 notesArray = {notes}

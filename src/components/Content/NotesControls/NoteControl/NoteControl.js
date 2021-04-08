@@ -97,9 +97,7 @@ const NoteControl = ({ add, remove, type }) => {
   }
 
   return (<div className={classes.NoteControl}>
-      <Button className={classes.more} onClick={() => { add(type); play(type) }}>+</Button>
-      <div className={classes.note}>{nota}</div>
-      <Button className={classes.less} onClick={() => remove(type)}>-</Button>
+      <Button className={classes.note} onClick={() => { add(type); play(type) }}>{nota}</Button>
   </div>);
 }
 
