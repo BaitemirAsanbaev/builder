@@ -34,20 +34,15 @@ const Content = () => {
         newNote.push(type)
         setNotes(newNote)
     }
-    function removeNote(type){ 
-        const newNote = [...notes]
-        const index = newNote.lastIndexOf(type);
-        if (index !== -1) {
-          newNote.splice(index, 1);
-        }
-        setNotes(newNote);
-      }
       function removeAllNote(){ 
         const newNote = [...notes]
         if (newNote.length !== -1) {
           newNote.splice(-1, 1);
         }
         setNotes(newNote);
+      }
+      function clearNotes(){
+        setNotes([])
       }
     function startOrdering() {
       setOrdering(true);
@@ -62,12 +57,12 @@ const Content = () => {
             <NotesPreview notes = {notes}/>
             <NotesControls 
                 addNote = {addNote}
-                removeNote = {removeNote}
                 removeAllNote = {removeAllNote}
                 switchTone = {switchTone}
                 tone = {tone}
                 notesArray = {notes}
                 startOrdering = {startOrdering}
+                clearNotes ={clearNotes}
                 />
             <Modal
             notes = {notes}

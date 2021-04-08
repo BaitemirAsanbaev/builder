@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex: 0 1 550px; */
 }
 .title{
     text-shadow: 0 0 22px red;
+    font-size: 46px;
     font-family: 'Jura';
     font-weight: 400;
     margin: 0px;

@@ -16,6 +16,7 @@
 }
 .total{
     font-size: 26px;
+    margin-bottom: 30px;
 }
 @media (min-width: 1040px){
     .NotesPreview{
