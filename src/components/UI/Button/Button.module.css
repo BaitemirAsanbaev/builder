@@ -8,6 +8,12 @@
     cursor: pointer;
     border-radius: 5px;
   }
+  .addBtn{
+    padding: 0 0 5px 0;
+  }
+  .remove{
+    margin-top: 20px;
+  }
   .order{
     padding: 5px 25px;
   }

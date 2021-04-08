@@ -15,6 +15,13 @@ const Button = (props) => {
   if(props.red){
     className.push(classes.red)
   }
+  if(props.addBtn){
+    className.push(classes.addBtn)
+  }
+  if(props.remove){
+    className.push(classes.remove)
+  }
+  
   return (
     <button {...props} className={className.join(" ")}>{props.children}</button>
   );

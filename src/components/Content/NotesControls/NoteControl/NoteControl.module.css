@@ -4,15 +4,6 @@
     align-items: center;
     margin: 1rem 0;
 }
-.note {
-    position: static;
-    margin: 0 2rem;
-    height: 40px;
-    width: 40px;
-    font-family: 'Jura';
-    font-size: 24px;
-    text-shadow: 0 0 10px #ff0000;
-}
 .NoteControl button{
     border: 0;
     margin: 0 .5rem;

@@ -27,7 +27,7 @@ const NotesControls = ({addNote, removeNote, removeAllNote, tone, switchTone, no
     return ( 
         <div className = {classes.NotesControls}>
             <Switch switchTone = {switchTone}/>
-            <Button onClick = {removeAllNote}>Remove</Button>
+            <Button onClick = {removeAllNote} remove disabled = {!notesArray.length}>Remove</Button>
             {result}
             <Button disabled = {!notesArray.length} onClick ={startOrdering} order = {true}>Order</Button>
         </div>
