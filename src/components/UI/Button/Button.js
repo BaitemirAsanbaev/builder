@@ -15,8 +15,8 @@ const Button = (props) => {
   if(props.red){
     className.push(classes.red)
   }
-  if(props.addBtn){
-    className.push(classes.addBtn)
+  if(props.addbtn){
+    className.push(classes.addbtn)
   }
   if(props.remove){
     className.push(classes.remove)

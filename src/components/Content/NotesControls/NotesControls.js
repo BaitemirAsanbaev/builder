@@ -28,11 +28,11 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
         <div className = {classes.NotesControls}>
             <Switch switchTone = {switchTone}/>
             <div>
-                <Button onClick = {removeAllNote} remove disabled = {!notesArray.length}>Remove</Button>
-                <Button onClick = {clearNotes} remove disabled = {!notesArray.length}>Clear</Button>
+                <Button onClick = {removeAllNote} remove = 'true' disabled = {!notesArray.length}>Remove</Button>
+                <Button onClick = {clearNotes} remove = 'true' disabled = {!notesArray.length}>Clear</Button>
             </div>
             {result}
-            <Button disabled = {!notesArray.length} onClick ={startOrdering} order>Order</Button>
+            <Button disabled = {!notesArray.length} onClick ={startOrdering} order = 'true'>Order</Button>
         </div>
      );
 }

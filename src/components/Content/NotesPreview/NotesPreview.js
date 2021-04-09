@@ -20,7 +20,7 @@ import Button from "../../UI/Button/Button";
             </div>
             <div className={classes.extraPreview}>
                 <div className = {classes.total}>{notes.length} notes in total</div>
-                <Button onClick={()=>playAll()} modalbutton green>Play</Button>
+                <Button onClick={()=>playAll()} modalbutton = 'true' green = 'true'>Play</Button>
             </div>
         </div>
      );

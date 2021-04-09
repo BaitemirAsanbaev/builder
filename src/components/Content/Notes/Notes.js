@@ -23,7 +23,6 @@ import bd from "../../../images/bd.png"
 import React from 'react'
 
 const Notes = ({type}) => {
-    console.log(type)
     const types = {
         c: {backgroundImage: `url(${c})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         d: {backgroundImage: `url(${d})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
