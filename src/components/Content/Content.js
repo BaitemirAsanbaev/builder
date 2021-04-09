@@ -20,15 +20,16 @@ import cb from "../../audio/cb.mp3";
 import axios from "axios";
 const Content = () => {
     
-    const [notes, setNotes] = useState ([
+    const [notes, setNotes] = useState ([]);
 
-    ]);
     
     const [ordering, setOrdering] = useState(false);
 
 
     const [tone, setTone] = useState ("");
 
+
+    const [compName, setCompName] = useState('hehge')
     
     let inter;
     let i = 0;
@@ -113,7 +114,7 @@ const Content = () => {
 
 
     function finishOrdering(){
-      axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/order.json', Object.assign({}, notes)).then(()=>{
+      axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/order.json', Object.assign({name: compName}, notes)).then(()=>{
         setOrdering(false)
         setNotes([])
       })
@@ -166,8 +167,8 @@ const Content = () => {
                 show={ordering}
                 cancel={stopOrdering}
                 finish={finishOrdering}
-                playAll = {playAll}>
-
+                playAll = {playAll}
+                setName = {setCompName}>
                 </Modal>
         </div>
      );

@@ -4,11 +4,11 @@ import Button from "../Button/Button";
 
 
 
-const Modal = ({ show, cancel, finish, notes, playAll}) => {
+const Modal = ({ show, cancel, finish, notes, playAll, setName}) => {
   const style = {
     transform: show ? "translateY(0)" : "translateY(-100vh)",
   };
-
+  let input = <input className={classes.compName} type="text" onChange={(event)=>setName(event.target.value)} />
 
   return (
     <div className={classes.Modal}>
@@ -20,7 +20,7 @@ const Modal = ({ show, cancel, finish, notes, playAll}) => {
           </div>
         <div>
             <h2>Name your composition</h2>
-            <input className={classes.compName} type="text" />
+            {input}
         </div>
         <div className={classes.buttons}>
           <Button onClick={finish} modalbutton = 'true' green = 'true'>Save</Button>
