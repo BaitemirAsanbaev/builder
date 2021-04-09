@@ -17,6 +17,7 @@ import gd from "../../audio/gd.mp3";
 import ad from "../../audio/ad.mp3";
 import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
+import axios from "axios";
 const Content = () => {
     
     const [notes, setNotes] = useState ([
@@ -112,7 +113,12 @@ const Content = () => {
     }
 
 
-
+    function finishOrdering(){
+      axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/order.json', Object.assign({}, notes)).then(()=>{
+        setOrdering(false)
+        setNotes([])
+      })
+    }
 
 
     function switchTone(tonalnost){
@@ -156,12 +162,15 @@ const Content = () => {
                 notesArray = {notes}
                 startOrdering = {startOrdering}
                 clearNotes ={clearNotes}
-                playAll = {playAll}
                 />
             <Modal
-            notes = {notes}
+                notes = {notes}
                 show={ordering}
-                cancel={stopOrdering}></Modal>
+                cancel={stopOrdering}
+                finish={finishOrdering}
+                playAll = {playAll}>
+
+                </Modal>
         </div>
      );
 }

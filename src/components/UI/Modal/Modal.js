@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 
 
-const Modal = ({ show, cancel, notes, playAll}) => {
+const Modal = ({ show, cancel, finish, notes, playAll}) => {
   const style = {
     transform: show ? "translateY(0)" : "translateY(-100vh)",
   };
@@ -23,8 +23,8 @@ const Modal = ({ show, cancel, notes, playAll}) => {
             <input className={classes.compName} type="text" />
         </div>
         <div className={classes.buttons}>
-          <Button onClick={cancel} modalButton = {true} green = {true}>Save</Button>
-          <Button onClick={()=>playAll()} modalButton = {true} green = {true}>Play</Button>
+          <Button onClick={finish} modalButton = {true} green = {true}>Save</Button>
+          <Button onClick={playAll} modalButton = {true} green = {true}>Play</Button>
           <Button onClick={cancel} modalButton = {true} red = {true}>Cancel</Button>
         </div>
       </div>
