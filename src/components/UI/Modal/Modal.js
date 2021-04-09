@@ -23,9 +23,9 @@ const Modal = ({ show, cancel, finish, notes, playAll}) => {
             <input className={classes.compName} type="text" />
         </div>
         <div className={classes.buttons}>
-          <Button onClick={finish} modalButton = {true} green = {true}>Save</Button>
-          <Button onClick={playAll} modalButton = {true} green = {true}>Play</Button>
-          <Button onClick={cancel} modalButton = {true} red = {true}>Cancel</Button>
+          <Button onClick={finish} modalbutton green>Save</Button>
+          <Button onClick={playAll} modalbutton green>Play</Button>
+          <Button onClick={cancel} modalbutton red>Cancel</Button>
         </div>
       </div>
     </div>

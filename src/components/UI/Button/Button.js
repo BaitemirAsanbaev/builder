@@ -6,8 +6,8 @@ const Button = (props) => {
   if(props.order){
     className.push(classes.order)
   }
-  if(props.modalButton){
-    className.push(classes.modalButton)
+  if(props.modalbutton){
+    className.push(classes.modalbutton)
   }
   if(props.green){
     className.push(classes.green)

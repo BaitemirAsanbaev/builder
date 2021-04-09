@@ -103,7 +103,6 @@ const Content = () => {
           default:
         }
         all.play()
-        console.log(notes[i])
         i++
           }, 500)
   
@@ -128,7 +127,6 @@ const Content = () => {
 
 
     function addNote(type){
-      // axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/notes.json', Object.assign({}, notes))
         const newNote = [...notes]
         newNote.push(type)
         setNotes(newNote)

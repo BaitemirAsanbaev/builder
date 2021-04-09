@@ -17,10 +17,11 @@
   .order{
     padding: 5px 25px;
   }
-  .modalButton{
+  .modalbutton{
     margin: 10px;
     box-shadow: 0px 0px 7px #2b2b2b;
     transition: background-color .5s;
+    padding: 5px 15px;
   }
   .green:hover{
     background-color: palegreen!important;
