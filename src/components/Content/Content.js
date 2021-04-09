@@ -19,7 +19,6 @@ import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
 import axios from "axios";
 const Content = () => {
-    
     const [notes, setNotes] = useState ([]);
 
     
@@ -29,8 +28,12 @@ const Content = () => {
     const [tone, setTone] = useState ("");
 
 
-    const [compName, setCompName] = useState('hehge')
-    
+    const [compName, setCompName] = useState('');
+
+
+    const [temp, setTemp] = useState(4);
+
+
     let inter;
     let i = 0;
     function playAll(){
@@ -105,8 +108,7 @@ const Content = () => {
         }
         all.play()
         i++
-          }, 500)
-  
+          }, temp * 100 + 100)
     }
     if(notes[i] < notes.length){
       clearInterval(inter)
@@ -161,6 +163,7 @@ const Content = () => {
                 notesArray = {notes}
                 startOrdering = {startOrdering}
                 clearNotes ={clearNotes}
+                setTemp = {setTemp}
                 />
             <Modal
                 notes = {notes}

@@ -3,7 +3,7 @@ import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
 import Button from "../../UI/Button/Button";
 
-const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, notesArray, startOrdering}) => {
+const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, notesArray, startOrdering, setTemp}) => {
 
     const result = [];
     const notes = [
@@ -26,6 +26,9 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
     }
     return ( 
         <div className = {classes.NotesControls}>
+            <div>
+                <input type="range" max={4} min={1} onInput={(event)=>setTemp(event.target.value)}></input>
+            </div>
             <Switch switchTone = {switchTone}/>
             <div>
                 <Button onClick = {removeAllNote} remove = 'true' disabled = {!notesArray.length}>Remove</Button>
