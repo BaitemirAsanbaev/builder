@@ -9,7 +9,8 @@
     border-radius: 5px;
   }
   .addbtn{
-    padding: 0 0 5px 0;
+    text-align: center;
+    padding: 2px 40px
   }
   .remove{
     margin: 20px 5px
