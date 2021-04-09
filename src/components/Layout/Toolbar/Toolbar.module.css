@@ -9,8 +9,12 @@
     position: sticky;
     top: 0;
     left: 0;
+    height: 90px;
     font-size: 34px;
     z-index: 2;
+}
+.logoDiv{
+    transform: scale(.8);
 }
 @media (max-width: 899px){
     .Toolbar nav{

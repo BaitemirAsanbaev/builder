@@ -1,0 +1,22 @@
+.NavItem{
+    background: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: 'Jura';
+    font-weight: 400;
+    font-size: 26px;
+    text-shadow: 0 0 22px red;
+    padding: 15px 35px;
+    transition: color 1s, font-size 1s;
+}
+.NavItem>a{
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s, font-size 1s;
+}
+.NavItem>a:hover{
+    font-size: 28px;
+    color: rgb(255, 126, 126);
+}

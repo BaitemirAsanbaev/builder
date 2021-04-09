@@ -1,11 +1,13 @@
 import classes from "./Nav.module.css";
+import NavItem from "./NavItem/NavItem";
 
 const Nav = () => {
     return ( 
-        <div className = {classes.Nav}>
-            <button className ={classes.navbtns}>Create</button>
-            <button className ={classes.navbtns}>Auth</button>
-        </div>
+            <ul className = {classes.Nav}>
+                <NavItem className ={classes.navbtns} url={'/'} active>Create</NavItem>
+                <NavItem className ={classes.navbtns} url={'/'}>Auth</NavItem>
+            </ul>
+
      );
 }
  
