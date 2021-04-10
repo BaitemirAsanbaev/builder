@@ -4,7 +4,7 @@ import Drawer from "./Drawer/Drawer";
 import { useState } from "react";
 import Content from "../Content/Content";
 
-const Layout = ({children}) => {
+const Layout = () => {
 
     const [drawerOpen, setDrawerOpen] = useState(false);
 
