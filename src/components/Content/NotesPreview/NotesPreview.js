@@ -31,7 +31,7 @@ import can from "../../../images/can.png"
                         <span>Recomended tempo: 1/4</span>
                     </div>
                     <div>
-                        <img src={l} className={classes.lImg}/>
+                        <img alt="L" src={l} className={classes.lImg}/>
                     </div>
                 </div>
                 <div onClick={()=>ImportSong('happybday')} className={classes.song + " " + classes.hbd}>
@@ -40,7 +40,7 @@ import can from "../../../images/can.png"
                         <span>Recomended tempo: 1/4</span>
                     </div>
                     <div>
-                        <img src={hbd}/>
+                        <img alt="happy birthday" src={hbd}/>
                     </div>
                 </div>
                 <div onClick={()=>ImportSong('harrypotter')} className={classes.song + " " + classes.hp}>
@@ -49,7 +49,7 @@ import can from "../../../images/can.png"
                         <span>Recomended tempo: 1/4</span>
                     </div>
                     <div>
-                        <img src={hp}/>
+                        <img alt="harry potter" src={hp}/>
                     </div>
                 </div>
                 <div onClick={()=>ImportSong('cancan')} className={classes.song + " " + classes.hcanp}>
@@ -58,7 +58,7 @@ import can from "../../../images/can.png"
                         <span>Recomended tempo: 1/4</span>
                     </div>
                     <div>
-                        <img src={can}/>
+                        <img alt="cancan" src={can}/>
                     </div>
                 </div>
             </div>
