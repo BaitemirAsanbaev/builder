@@ -2,6 +2,10 @@ import classes from "./NotesPreview.module.css";
 import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
+import l from "../../../images/l.png"
+import hbd from "../../../images/hbd.png"
+import hp from "../../../images/hp.png"
+import can from "../../../images/can.png"
     
     const NotesPreview = ({notes, playAll, ImportSong}) =>{
         const result = []
@@ -19,12 +23,44 @@ import Button from "../../UI/Button/Button";
                 {result}
             </div>
             <div className={classes.extraPreview}>
-                <div className = {classes.total}>{notes.length} notes in total</div>
+                <span className = {classes.total}>{notes.length} notes in total</span>
                 <Button onClick={playAll} modalbutton = 'true' green = 'true'>Play</Button>
-                <Button onClick={()=>ImportSong('deathnote')} modalbutton = 'true' green = 'true'>L's theme</Button>
-                <Button onClick={()=>ImportSong('happybday')} modalbutton = 'true' green = 'true'>Happy birthday</Button>
-                <Button onClick={()=>ImportSong('harrypotter')} modalbutton = 'true' green = 'true'>Harry Potter</Button>
-                <Button onClick={()=>ImportSong('cancan')} modalbutton = 'true' green = 'true'>Cancan</Button>
+                <div onClick={()=>ImportSong('deathnote')} className={classes.song + " " + classes.l}>
+                    <div>
+                        <h3 className={classes.songTitle}>L's theme</h3>
+                        <span>Recomended tempo: 1/4</span>
+                    </div>
+                    <div>
+                        <img src={l} className={classes.lImg}/>
+                    </div>
+                </div>
+                <div onClick={()=>ImportSong('happybday')} className={classes.song + " " + classes.hbd}>
+                    <div>
+                        <h3 className={classes.songTitle}>Happy birthday</h3>
+                        <span>Recomended tempo: 1/4</span>
+                    </div>
+                    <div>
+                        <img src={hbd}/>
+                    </div>
+                </div>
+                <div onClick={()=>ImportSong('harrypotter')} className={classes.song + " " + classes.hp}>
+                    <div>
+                        <h3 className={classes.songTitle}>Harry Potter</h3>
+                        <span>Recomended tempo: 1/4</span>
+                    </div>
+                    <div>
+                        <img src={hp}/>
+                    </div>
+                </div>
+                <div onClick={()=>ImportSong('cancan')} className={classes.song + " " + classes.hcanp}>
+                    <div>
+                        <h3 className={classes.songTitle}>Cancan</h3>
+                        <span>Recomended tempo: 1/4</span>
+                    </div>
+                    <div>
+                        <img src={can}/>
+                    </div>
+                </div>
             </div>
         </div>
      );
