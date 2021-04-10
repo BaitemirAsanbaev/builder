@@ -34,13 +34,18 @@ const Content = () => {
     const [temp, setTemp] = useState(4);
 
 
-    function ImportSong(song, tempo){
+    function ImportSong(song){
         axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
           switch (song) {
             case 'deathnote':
               setNotes(response.data.deathnote)
               break;
-          
+            case 'happybday':
+              setNotes(response.data.happybday)
+              break;
+            case 'harrypotter':
+              setNotes(response.data.harrypotter)
+              break;
             default:
               break;
           }
