@@ -34,6 +34,20 @@ const Content = () => {
     const [temp, setTemp] = useState(4);
 
 
+    function ImportSong(song, tempo){
+        axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
+          switch (song) {
+            case 'deathnote':
+              setNotes(response.data.deathnote)
+              break;
+          
+            default:
+              break;
+          }
+        })
+        
+    }
+
     let inter;
     let i = 0;
     function playAll(){
@@ -154,7 +168,7 @@ const Content = () => {
 
     return ( 
         <div className = {classes.Content}>
-            <NotesPreview notes = {notes} playAll = {playAll}/>
+            <NotesPreview notes = {notes} playAll = {playAll} ImportSong={ImportSong}/>
             <NotesControls 
                 addNote = {addNote}
                 removeAllNote = {removeAllNote}

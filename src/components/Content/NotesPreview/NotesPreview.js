@@ -3,7 +3,7 @@ import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
     
-    const NotesPreview = ({notes, playAll}) =>{
+    const NotesPreview = ({notes, playAll, ImportSong}) =>{
         const result = []
         for (const note in notes) {
                 result.push(<Notes key = {notes[note] + note} type = {notes[note]}/>)
@@ -20,7 +20,8 @@ import Button from "../../UI/Button/Button";
             </div>
             <div className={classes.extraPreview}>
                 <div className = {classes.total}>{notes.length} notes in total</div>
-                <Button onClick={()=>playAll()} modalbutton = 'true' green = 'true'>Play</Button>
+                <Button onClick={playAll} modalbutton = 'true' green = 'true'>Play</Button>
+                <Button onClick={()=>ImportSong('deathnote')} modalbutton = 'true' green = 'true'>L's theme</Button>
             </div>
         </div>
      );
