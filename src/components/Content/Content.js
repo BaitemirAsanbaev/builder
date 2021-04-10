@@ -46,6 +46,9 @@ const Content = () => {
             case 'harrypotter':
               setNotes(response.data.harrypotter)
               break;
+            case 'cancan':
+              setNotes(response.data.cancan)
+              break;
             default:
               break;
           }

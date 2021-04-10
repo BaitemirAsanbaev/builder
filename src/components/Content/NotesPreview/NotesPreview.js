@@ -24,6 +24,7 @@ import Button from "../../UI/Button/Button";
                 <Button onClick={()=>ImportSong('deathnote')} modalbutton = 'true' green = 'true'>L's theme</Button>
                 <Button onClick={()=>ImportSong('happybday')} modalbutton = 'true' green = 'true'>Happy birthday</Button>
                 <Button onClick={()=>ImportSong('harrypotter')} modalbutton = 'true' green = 'true'>Harry Potter</Button>
+                <Button onClick={()=>ImportSong('cancan')} modalbutton = 'true' green = 'true'>Cancan</Button>
             </div>
         </div>
      );
