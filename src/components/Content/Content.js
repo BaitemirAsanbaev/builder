@@ -49,6 +49,10 @@ const Content = () => {
             case 'cancan':
               setNotes(response.data.cancan)
               break;
+            case 'wellerman':
+              setNotes(response.data.wellerman)
+              break;
+              
             default:
               break;
           }

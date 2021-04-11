@@ -6,6 +6,7 @@ import l from "../../../images/l.png"
 import hbd from "../../../images/hbd.png"
 import hp from "../../../images/hp.png"
 import can from "../../../images/can.png"
+import wm from "../../../images/wellerman.png"
     
     const NotesPreview = ({notes, playAll, ImportSong}) =>{
         const result = []
@@ -52,13 +53,22 @@ import can from "../../../images/can.png"
                         <img alt="harry potter" src={hp}/>
                     </div>
                 </div>
-                <div onClick={()=>ImportSong('cancan')} className={classes.song + " " + classes.hcanp}>
+                <div onClick={()=>ImportSong('cancan')} className={classes.song + " " + classes.can}>
                     <div>
                         <h3 className={classes.songTitle}>Cancan</h3>
                         <span>Recomended tempo: 2/4</span>
                     </div>
                     <div>
                         <img alt="cancan" src={can}/>
+                    </div>
+                </div>
+                <div onClick={()=>ImportSong('wellerman')} className={classes.song + " " + classes.wm}>
+                    <div>
+                        <h3 className={classes.songTitle}>Wellerman</h3>
+                        <span>Recomended tempo: 1/4</span>
+                    </div>
+                    <div>
+                        <img alt="cancan" src={wm}/>
                     </div>
                 </div>
             </div>
