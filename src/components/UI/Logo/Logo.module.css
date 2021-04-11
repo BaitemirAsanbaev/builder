@@ -3,10 +3,31 @@
     justify-content: space-between;
     align-items: center;
 }
+.logoImg{
+    filter: invert(100%) brightness(150%);
+    width: 60px;
+}
+.logoDiv{
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
 .title{
     text-shadow: 0 0 22px red;
     font-size: 46px;
     font-family: 'Jura';
     font-weight: 400;
     margin: 0px;
+}
+@media (max-width: 700px){
+    .logoDiv{
+        display: none;
+    }
 }

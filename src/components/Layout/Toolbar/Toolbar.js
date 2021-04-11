@@ -6,7 +6,7 @@ import classes from "./Toolbar.module.css";
 const Toolbar = ({openDrawer}) => {
     return ( 
         <div className = {classes.Toolbar}>
-            <div className ={classes.logoDiv}>
+            <div className ={classes.logoCont}>
                 <Logo/>
             </div>
             <nav>

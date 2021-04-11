@@ -1,10 +1,12 @@
 import classes from "./Logo.module.css";
-import logo from "../../../images/logo.png"
+import logo from "../../../images/logo.svg"
 
 const Logo = () => {
     return ( 
         <div className = {classes.Logo}>
-            <img alt = "logo" src = {logo} className = {classes.logoImg}/>
+            <div className={classes.logoDiv}>
+                <img alt = "logo" src = {logo} className = {classes.logoImg}/>
+            </div>
             <h1 className = {classes.title}>Music maker</h1>
         </div>
      );

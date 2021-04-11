@@ -13,7 +13,7 @@
     font-size: 34px;
     z-index: 2;
 }
-.logoDiv{
+.logoCont{
     transform: scale(.8);
 }
 @media (max-width: 899px){
@@ -24,8 +24,5 @@
 @media (max-width: 700px){
     .Toolbar{
         font-size: 16px;
-    }
-    .Toolbar .logoDiv img{
-        display: none;
     }
 }
