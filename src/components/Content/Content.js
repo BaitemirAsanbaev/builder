@@ -189,7 +189,7 @@ const Content = () => {
             </Route>
 
             <Route exact path="/">
-              <NotesPreview notes = {notes}/>
+              <NotesPreview notes = {notes} playAll={playAll}/>
               <NotesControls 
                   addNote = {addNote}
                   removeAllNote = {removeAllNote}
