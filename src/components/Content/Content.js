@@ -18,6 +18,9 @@ import ad from "../../audio/ad.mp3";
 import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
 import axios from "axios";
+import { Route, Switch } from "react-router";
+import Songs from "./Songs/Songs";
+import NotFound from "../UI/NotFound/NotFound";
 const Content = () => {
     const [notes, setNotes] = useState ([]);
 
@@ -180,25 +183,35 @@ const Content = () => {
 
     return ( 
         <div className = {classes.Content}>
-            <NotesPreview notes = {notes} playAll = {playAll} ImportSong={ImportSong}/>
-            <NotesControls 
-                addNote = {addNote}
-                removeAllNote = {removeAllNote}
-                switchTone = {switchTone}
-                tone = {tone}
-                notesArray = {notes}
-                startOrdering = {startOrdering}
-                clearNotes ={clearNotes}
-                setTemp = {setTemp}
-                />
-            <Modal
-                notes = {notes}
-                show={ordering}
-                cancel={stopOrdering}
-                finish={finishOrdering}
-                playAll = {playAll}
-                setName = {setCompName}>
+          <Switch>
+            <Route exact path="/songs">
+              <Songs  playAll = {playAll} ImportSong={ImportSong}/>
+            </Route>
+
+            <Route exact path="/">
+              <NotesPreview notes = {notes}/>
+              <NotesControls 
+                  addNote = {addNote}
+                  removeAllNote = {removeAllNote}
+                  switchTone = {switchTone}
+                  tone = {tone}
+                  notesArray = {notes}
+                  startOrdering = {startOrdering}
+                  clearNotes ={clearNotes}
+                  setTemp = {setTemp}
+                  />
+                <Modal
+                  notes = {notes}
+                  show={ordering}
+                  cancel={stopOrdering}
+                  finish={finishOrdering}
+                  playAll = {playAll}
+                  setName = {setCompName}>
                 </Modal>
+            </Route>
+            <Route path="/" component={NotFound}/>
+          </Switch>
+
         </div>
      );
 }

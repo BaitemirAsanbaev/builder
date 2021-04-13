@@ -1,0 +1,29 @@
+
+.song{
+    height: 180px;
+    width: 500px;
+    background-color: #292929;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 20px 0px;
+    transition: background-color .5s;
+}
+.song img{
+    transition: transform .5s;
+}
+.song:hover{
+    background-color: #1a1a1b;
+}
+.song:hover img{
+    transform: scale(1.1);
+}
+.songTitle{
+    font-size: 32px;
+    margin: 0px 0px 20px 0px;
+}
+.lImg{
+    filter: invert(100%);
+}
