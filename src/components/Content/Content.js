@@ -21,6 +21,7 @@ import axios from "axios";
 import { Route, Switch } from "react-router";
 import Songs from "./Songs/Songs";
 import NotFound from "../UI/NotFound/NotFound";
+import Auth from "./Auth/Auth";
 const Content = () => {
     const [notes, setNotes] = useState ([]);
 
@@ -186,6 +187,9 @@ const Content = () => {
           <Switch>
             <Route exact path="/songs">
               <Songs  playAll = {playAll} ImportSong={ImportSong}/>
+            </Route>
+            <Route exact path="/auth">
+              <Auth/>
             </Route>
 
             <Route exact path="/">
