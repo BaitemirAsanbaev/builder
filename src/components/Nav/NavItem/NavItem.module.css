@@ -14,9 +14,8 @@
 .NavItem>a{
     color: #fff;
     text-decoration: none;
-    transition: color 1s, font-size 1s;
+    transition: color 1s;
 }
 .NavItem>a:hover{
-    font-size: 28px;
     color: rgb(255, 126, 126);
 }

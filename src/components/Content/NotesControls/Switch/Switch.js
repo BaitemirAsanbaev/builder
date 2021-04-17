@@ -11,7 +11,7 @@ const Switch = ({ switchTone }) => {
         type="radio"
         id="none"
         name="tune"
-        chacked = "checked"
+        chacked="checked"
         onChange = {()=>switchTone("")}/>
 
     const inpD = <input
