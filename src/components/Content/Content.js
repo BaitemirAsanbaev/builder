@@ -139,10 +139,13 @@ const Content = () => {
         all.play()
         i++
           }, temp * 100 + 100)
+        
+        if(i > notes.length){
+          clearInterval(inter)
+        }
+        i = 0;
     }
-    if(notes[i] < notes.length){
-      clearInterval(inter)
-    }
+  
 
 
     function finishOrdering(){
