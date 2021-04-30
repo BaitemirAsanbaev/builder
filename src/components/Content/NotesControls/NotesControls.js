@@ -3,7 +3,7 @@ import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
 import Button from "../../UI/Button/Button";
 
-const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, notesArray, startOrdering, setTemp}) => {
+const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, notesArray, startOrdering}) => {
 
     const result = [];
     const notes = [
@@ -26,16 +26,7 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
     }
     return ( 
         <div className = {classes.NotesControls}>
-            <div>
-                <h4>Tempo</h4>
-                <div className={classes.templabels}>
-                    <span>1/4</span>
-                    <span>2/4</span>
-                    <span>3/4</span>
-                    <span>4/4</span>
-                </div>
-                <input type="range" max={4} min={1} onInput={(event)=>setTemp(event.target.value)}></input>
-            </div>
+
             <h4>Tonality</h4>
             <Switch switchTone = {switchTone}/>
             <div>

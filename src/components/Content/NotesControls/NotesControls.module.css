@@ -1,6 +1,6 @@
 .NotesControls{
     flex: 0 0 350px;
-    height: 780px;
+    height: 730px;
     border-radius: 1rem;
     padding: 1rem;
     background-color: #1a1a1a;
@@ -9,9 +9,7 @@
     padding: 30px 60px;
     transform: translateY(-50px);
   }
-  .templabels>span{
-    margin: 0 10px;
-  }
+
   @media(max-width: 445px){
     .NotesControls{
       transform: scale(.7);
