@@ -15,7 +15,7 @@ const Songs = ({ImportSong}) => {
                             <h3 className={classes.songTitle}>L's theme</h3>
                             <span>Recomended tempo: 1/4</span>
                         </div>
-                        <div>
+                        <div className={classes.imgdiv}>
                             <img alt="L" src={l} className={classes.lImg}/>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const Songs = ({ImportSong}) => {
                             <h3 className={classes.songTitle}>Happy birthday</h3>
                             <span>Recomended tempo: 3/4</span>
                         </div>
-                        <div>
+                        <div className={classes.imgdiv}>
                             <img alt="happy birthday" src={hbd}/>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Songs = ({ImportSong}) => {
                             <h3 className={classes.songTitle}>Harry Potter</h3>
                             <span>Recomended tempo: 2/4</span>
                         </div>
-                        <div>
+                        <div className={classes.imgdiv}>
                             <img alt="harry potter" src={hp}/>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ const Songs = ({ImportSong}) => {
                             <h3 className={classes.songTitle}>Cancan</h3>
                             <span>Recomended tempo: 2/4</span>
                         </div>
-                        <div>
+                        <div className={classes.imgdiv}>
                             <img alt="cancan" src={can}/>
                         </div>
                     </div>
@@ -59,8 +59,8 @@ const Songs = ({ImportSong}) => {
                             <h3 className={classes.songTitle}>Wellerman</h3>
                             <span>Recomended tempo: 1/4</span>
                         </div>
-                        <div>
-                            <img alt="cancan" src={wm}/>
+                        <div className={classes.imgdiv + " " + classes.wmg}>
+                            <img alt="wm" src={wm}/>
                         </div>
                     </div>
                 </Link>

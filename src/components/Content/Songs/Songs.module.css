@@ -1,3 +1,7 @@
+.Songs{
+    display: flex;
+    flex-direction: column;
+}
 .link{
     text-decoration: none;
 }
@@ -28,4 +32,16 @@
 }
 .lImg{
     filter: invert(100%);
+}
+@media(max-width: 570px){
+    .song{
+        width: 300px;
+    }
+    .songTitle{
+        font-size: 20px;
+    }
+    .wmg{
+        position: relative;
+        left: -40px;
+    }
 }
