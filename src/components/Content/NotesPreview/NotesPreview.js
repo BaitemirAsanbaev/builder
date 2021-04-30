@@ -29,8 +29,8 @@ import Button from "../../UI/Button/Button";
                         <span>4/4</span>
                     </div>
                     <input type="range" max={4} min={1} onInput={(event)=>setTemp(event.target.value)}></input>
-                </div>
                 <Button onClick={playAll} modalbutton = 'true' green = 'true'>Play</Button>
+                </div>
                 
             </div>
         </div>
