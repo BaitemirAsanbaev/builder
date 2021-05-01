@@ -20,6 +20,7 @@ import fd from "../../../images/fd.png"
 import gd from "../../../images/gd.png"
 import ad from "../../../images/ad.png"
 import bd from "../../../images/bd.png"
+import p from "../../../images/pouse.png"
 import React from 'react'
 
 const Notes = ({type}) => {
@@ -45,7 +46,7 @@ const Notes = ({type}) => {
         gd: {backgroundImage: `url(${gd})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         ad: {backgroundImage: `url(${ad})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
         bd: {backgroundImage: `url(${bd})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'},
-        p: {backgroundColor: 'black', width: '40px', height: '13px', margin: '0px 15px', transform: 'translateY(123px)'}
+        p: {backgroundImage: `url(${p})`, backgroundRepeat: 'no-repeat', width: '55px', height: '300px', margin: '0px 15px', transform: 'translateY(72px)'}
     }
     
     return ( 
