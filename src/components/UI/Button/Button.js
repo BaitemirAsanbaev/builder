@@ -21,7 +21,9 @@ const Button = (props) => {
   if(props.remove){
     className.push(classes.remove)
   }
-  
+  if(props.mt){
+    className.push(classes.mt)
+  }
   return (
     <button {...props} className={className.join(" ")}>{props.children}</button>
   );

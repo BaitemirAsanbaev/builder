@@ -196,7 +196,7 @@ const Content = () => {
             </Route>
 
             <Route exact path="/">
-              <NotesPreview notes = {notes} playAll={playAll} setTemp = {setTemp}/>
+              <NotesPreview notes = {notes} playAll={playAll} setTemp = {setTemp} startOrdering = {startOrdering} notesArray = {notes}/>
               <NotesControls 
                   addNote = {addNote}
                   removeAllNote = {removeAllNote}

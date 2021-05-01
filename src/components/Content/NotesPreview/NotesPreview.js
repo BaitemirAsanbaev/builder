@@ -3,7 +3,7 @@ import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
     
-    const NotesPreview = ({notes, playAll, setTemp}) =>{
+    const NotesPreview = ({notes, playAll, setTemp, startOrdering, notesArray}) =>{
         const result = []
         for (const note in notes) {
                 result.push(<Notes key = {notes[note] + note} type = {notes[note]}/>)
@@ -29,7 +29,8 @@ import Button from "../../UI/Button/Button";
                         <span>4/4</span>
                     </div>
                     <input type="range" max={4} min={1} onInput={(event)=>setTemp(event.target.value)}></input>
-                <Button onClick={playAll} modalbutton = 'true' green = 'true'>Play</Button>
+                <Button onClick={playAll} modalbutton = 'true' green = 'true' mt = "true">Play</Button>
+                <Button disabled = {!notesArray.length} onClick ={startOrdering} order = 'true' mt = "true">Order</Button>
                 </div>
                 
             </div>

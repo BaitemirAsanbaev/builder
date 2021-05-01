@@ -34,7 +34,6 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
                 <Button onClick = {clearNotes} remove = 'true' disabled = {!notesArray.length}>Clear</Button>
             </div>
             {result}
-            <Button disabled = {!notesArray.length} onClick ={startOrdering} order = 'true'>Order</Button>
         </div>
      );
 }
