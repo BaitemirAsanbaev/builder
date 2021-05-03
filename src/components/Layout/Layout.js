@@ -10,7 +10,7 @@ const Layout = () => {
 
     return ( 
         <div className = {classes.Layout}>
-            <Toolbar openDrawer={() => setDrawerOpen(true)} />
+            <Toolbar openDrawer={() => setDrawerOpen(true)} closeDrawer={() => setDrawerOpen(false)}  />
             <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
             <main>
                 <Content/>

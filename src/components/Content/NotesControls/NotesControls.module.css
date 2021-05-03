@@ -1,16 +1,16 @@
 .NotesControls{
     flex: 0 0 350px;
-    flex-direction: column;
-    height: 650px;
+    height: 680px;
     border-radius: 1rem;
     background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px 70px;
     transform: translateY(-50px);
-    align-items: center;
   }
-
+.contBtns{
+  display: flex;
+}
   @media(max-width: 445px){
     .NotesControls{
       transform: scale(.7);

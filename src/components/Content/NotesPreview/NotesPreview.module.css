@@ -1,18 +1,18 @@
 .NotesPreview{
     flex: 0 0 663px;
-    margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    margin-top: 60px;
 }
 .extraPreview{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    transform: translateY(-100px);
+    transform: translateY(-30px);
 }
 .templabels>span{
     margin: 0 10px;
@@ -46,6 +46,9 @@
     }
 }
 @media (max-width: 780px){
+    .NotesPreview{
+        margin-top: 0px;
+    }
     .sheet{
         transform: scale(.8);
     }
@@ -66,13 +69,14 @@
         transform: scale(.5);
     }
     .NotesPreview{
-        margin-bottom: -200px
+        margin-bottom: -100px
     }
 }
 @media (max-width: 375px){
     .sheet{
         transform: scale(.4);
     }
+
 }
 @media (max-width: 300px){
     .sheet{
@@ -81,6 +85,6 @@
     .extraPreview{
         transform: scale(.6);
         position: relative;
-        top: -200px;
+        top: -130px;
     }
 }

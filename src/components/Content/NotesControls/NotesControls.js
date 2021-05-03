@@ -29,7 +29,7 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
 
             <h4>Tonality</h4>
             <Switch switchTone = {switchTone}/>
-            <div>
+            <div className={classes.contBtns}>
                 <Button onClick = {removeAllNote} remove = 'true' disabled = {!notesArray.length}>Remove</Button>
                 <Button onClick = {clearNotes} remove = 'true' disabled = {!notesArray.length}>Clear</Button>
             </div>
