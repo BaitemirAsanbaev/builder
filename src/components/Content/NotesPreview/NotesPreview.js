@@ -2,13 +2,14 @@ import classes from "./NotesPreview.module.css";
 import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
+import { useSelector } from "react-redux";
     
-    const NotesPreview = ({notes, playAll, setTemp, startOrdering, notesArray}) =>{
+    const NotesPreview = ({notes, playAll, setTemp, startOrdering}) =>{
+        
         const result = []
         for (const note in notes) {
                 result.push(<Notes key = {notes[note] + note} type = {notes[note]}/>)
         }
-
 
 
     return ( 
@@ -30,7 +31,7 @@ import Button from "../../UI/Button/Button";
                     </div>
                     <input type="range" max={4} min={1} onInput={(event)=>setTemp(event.target.value)}></input>
                 <Button onClick={playAll} modalbutton = 'true' green = 'true' mt = "true">Play</Button>
-                <Button disabled = {!notesArray.length} onClick ={startOrdering} order = 'true' mt = "true">Order</Button>
+                <Button disabled = {!notes.length} onClick ={startOrdering} order = 'true' mt = "true">Order</Button>
                 </div>
                 
             </div>

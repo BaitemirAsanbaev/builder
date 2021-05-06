@@ -2,9 +2,11 @@ import classes from "./NotesControls.module.css";
 import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
 import Button from "../../UI/Button/Button";
+import { useDispatch } from "react-redux";
+import { clear, remove } from "../../../redux/actions/builder";
 
-const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, notesArray, startOrdering}) => {
-
+const NotesControls = ({ tone, switchTone, notesArray}) => {
+    const dispatch = useDispatch();
     const result = [];
     const notes = [
         'c',
@@ -19,7 +21,6 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
     for(const note in notes){
         result.push(<NoteControl
             key = {notes[note]}
-            add = {addNote}
             type = {notes[note] + tone}
             notes = {notes}
         />)
@@ -30,8 +31,8 @@ const NotesControls = ({addNote, removeAllNote, clearNotes, tone, switchTone, no
             <h4>Tonality</h4>
             <Switch switchTone = {switchTone}/>
             <div className={classes.contBtns}>
-                <Button onClick = {removeAllNote} remove = 'true' disabled = {!notesArray.length}>Remove</Button>
-                <Button onClick = {clearNotes} remove = 'true' disabled = {!notesArray.length}>Clear</Button>
+                <Button onClick = {()=>{dispatch(remove())}} remove = 'true' disabled = {!notesArray.length}>Remove</Button>
+                <Button onClick = {()=>{dispatch(clear())}} remove = 'true' disabled = {!notesArray.length}>Clear</Button>
             </div>
             {result}
         </div>

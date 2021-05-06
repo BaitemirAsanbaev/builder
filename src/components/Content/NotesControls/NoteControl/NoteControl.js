@@ -14,11 +14,18 @@ import ad from "../../../../audio/ad.mp3";
 import bd from "../../../../audio/bd.mp3";
 import cb from "../../../../audio/cb.mp3";
 import Button from "../../../UI/Button/Button";
-const NoteControl = ({ add, type }) => {
+import { useDispatch } from "react-redux";
+import { add } from "../../../../redux/actions/builder";
+const NoteControl = ({ type }) => {
+
+  const dispatch = useDispatch();
 
 
 
-  function play(note) {
+  function play(note){
+  
+
+  
     let relAudio = new Audio();
     relAudio.preload = 'auto';
 
@@ -96,7 +103,7 @@ const NoteControl = ({ add, type }) => {
   }
 
   return (<div className={classes.NoteControl}>
-      <Button addbtn = 'true' onClick={() => { add(type); play(type) }}>{nota}</Button>
+      <Button addbtn = 'true' onClick={ () => {{dispatch(add(type))}; play(type)} }>{nota}</Button>
   </div>);
 }
 

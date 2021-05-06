@@ -22,9 +22,10 @@ import { Route, Switch } from "react-router";
 import Songs from "./Songs/Songs";
 import NotFound from "../UI/NotFound/NotFound";
 import Auth from "./Auth/Auth";
+import { useSelector } from "react-redux";
 const Content = () => {
-    const [notes, setNotes] = useState ([]);
 
+    const notes = useSelector(state => state);
     
     const [ordering, setOrdering] = useState(false);
 
@@ -39,29 +40,28 @@ const Content = () => {
 
 
     function ImportSong(song){
-        axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
-          switch (song) {
-            case 'deathnote':
-              setNotes(response.data.deathnote)
-              break;
-            case 'happybday':
-              setNotes(response.data.happybday)
-              break;
-            case 'harrypotter':
-              setNotes(response.data.harrypotter)
-              break;
-            case 'cancan':
-              setNotes(response.data.cancan)
-              break;
-            case 'wellerman':
-              setNotes(response.data.wellerman)
-              break;
+        // axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
+        //   switch (song) {
+        //     case 'deathnote':
+        //       setNotes(response.data.deathnote)
+        //       break;
+        //     case 'happybday':
+        //       setNotes(response.data.happybday)
+        //       break;
+        //     case 'harrypotter':
+        //       setNotes(response.data.harrypotter)
+        //       break;
+        //     case 'cancan':
+        //       setNotes(response.data.cancan)
+        //       break;
+        //     case 'wellerman':
+        //       setNotes(response.data.wellerman)
+        //       break;
               
-            default:
-              break;
-          }
-        })
-        
+        //     default:
+        //       break;
+        //   }
+        // })
     }
 
     let inter;
@@ -151,7 +151,7 @@ const Content = () => {
     function finishOrdering(){
       axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/order.json', Object.assign({name: compName}, notes)).then(()=>{
         setOrdering(false)
-        setNotes([])
+        // setNotes([])
       })
     }
 
@@ -162,21 +162,21 @@ const Content = () => {
 
 
 
-    function addNote(type){
-        const newNote = [...notes]
-        newNote.push(type)
-        setNotes(newNote)
-    }
-      function removeAllNote(){ 
-        const newNote = [...notes]
-        if (newNote.length !== -1) {
-          newNote.splice(-1, 1);
-        }
-        setNotes(newNote);
-      }
-      function clearNotes(){
-        setNotes([])
-      }
+    // function addNote(type){
+    //     const newNote = [...notes]
+    //     newNote.push(type)
+    //     setNotes(newNote)
+    // }
+    //   function removeAllNote(){ 
+    //     const newNote = [...notes]
+    //     if (newNote.length !== -1) {
+    //       newNote.splice(-1, 1);
+    //     }
+    //     setNotes(newNote);
+    //   }
+    //   function clearNotes(){
+    //     setNotes([])
+    //   }
     function startOrdering() {
       setOrdering(true);
     }
@@ -196,15 +196,19 @@ const Content = () => {
             </Route>
 
             <Route exact path="/">
-              <NotesPreview notes = {notes} playAll={playAll} setTemp = {setTemp} startOrdering = {startOrdering} notesArray = {notes}/>
+              <NotesPreview
+                  notes = {notes}
+                  playAll = {playAll}
+                  setTemp = {setTemp}
+                  startOrdering = {startOrdering}/>
               <NotesControls 
-                  addNote = {addNote}
-                  removeAllNote = {removeAllNote}
+                  // addNote = {addNote}
+                  // removeAllNote = {removeAllNote}
+                  // clearNotes ={clearNotes}
                   switchTone = {switchTone}
                   tone = {tone}
                   notesArray = {notes}
                   startOrdering = {startOrdering}
-                  clearNotes ={clearNotes}
                   />
                 <Modal
                   notes = {notes}
