@@ -2,7 +2,6 @@ import classes from "./NotesPreview.module.css";
 import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
-import { useSelector } from "react-redux";
     
     const NotesPreview = ({notes, playAll, setTemp, startOrdering}) =>{
         
