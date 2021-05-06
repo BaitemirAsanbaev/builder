@@ -106,7 +106,7 @@ const NoteControl = ({ type }) => {
       <Button
       addbtn = 'true'
       onClick={()=>{
-        {(dispatch(add(type)))};
+        dispatch(add(type));
         play(type)}}>
           {nota}
       </Button>
