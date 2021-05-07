@@ -17,13 +17,13 @@ import gd from "../../audio/gd.mp3";
 import ad from "../../audio/ad.mp3";
 import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
-import axios from "axios";
+import axios from "../../axios";
 import { Route, Switch } from "react-router";
 import Songs from "./Songs/Songs";
 import NotFound from "../UI/NotFound/NotFound";
 import Auth from "./Auth/Auth";
-import { useSelector } from "react-redux";
-import { load } from "../../redux/actions/builder";
+import { useDispatch, useSelector } from "react-redux";
+import { clear } from "../../redux/actions/builder";
 const Content = () => {
 
     const notes = useSelector(state => state);
@@ -39,31 +39,8 @@ const Content = () => {
 
     const [temp, setTemp] = useState(4);
 
+    const dispatch = useDispatch();
 
-    function ImportSong(song){
-        axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
-          switch (song) {
-            case 'deathnote':
-              load(Object.values(response.data.deathnote))
-              break;
-            case 'happybday':
-              load(Object.values(response.data.happybday))
-              break;
-            case 'harrypotter':
-              load(Object.values(response.data.harrypotter))
-              break;
-            case 'cancan':
-              load(Object.values(response.data.cancan))
-              break;
-            case 'wellerman':
-              load(Object.values(response.data.wellerman))
-              break;
-              
-            default:
-              break;
-          }
-        })
-    }
 
     let inter;
     let i = 0;
@@ -150,9 +127,11 @@ const Content = () => {
 
 
     function finishOrdering(){
-      axios.post('https://builder-a3cdc-default-rtdb.firebaseio.com/order.json', Object.assign({name: compName}, notes)).then(()=>{
-        setOrdering(false)
-        // setNotes([])
+      axios.post('/order.json', Object.assign({name: compName}, notes)).then(()=>{
+        
+        setOrdering(false);
+        console.log(ordering);
+        dispatch(clear());
       })
     }
 
@@ -190,7 +169,7 @@ const Content = () => {
         <div className = {classes.Content}>
           <Switch>
             <Route exact path="/songs">
-              <Songs  playAll = {playAll} ImportSong={ImportSong}/>
+              <Songs  playAll = {playAll}/>
             </Route>
             <Route exact path="/auth">
               <Auth/>

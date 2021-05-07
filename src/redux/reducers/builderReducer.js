@@ -1,3 +1,4 @@
+import axios from '../../axios';
 import { ADD_NOTE, REMOVE_NOTE, CLEAR_NOTE, LOAD_NOTE} from '../actions/types'
 
 const initialState = [];
@@ -21,8 +22,32 @@ const clearNote = (state) => {
   newState = []
   return newState;
 }
-const loadNote = (action) => {
-  const newState = [...action.loadedSong];
+
+
+const loadNote = (state, action) => {
+  let newState = [...state]
+  axios.get('/examples.json').then(response =>{
+    switch (action.loadedSong) {
+      case 'deathnote':
+        newState = (response.data.deathnote)
+        break;
+      case 'happybday':
+        newState = (response.data.happybday)
+        break;
+      case 'harrypotter':
+        newState = (response.data.harrypotter)
+        break;
+      case 'cancan':
+        newState = (response.data.cancan)
+        break;
+      case 'wellerman':
+        newState = (response.data.wellerman)
+        break;
+        
+      default:
+        break;
+    }
+  })
   return newState;
 }
 
@@ -41,7 +66,8 @@ const builderReducer = (state = initialState, action) => {
       return clearNote(state);
 
     case LOAD_NOTE:
-      return loadNote(action);
+      
+      return loadNote(state, action);
   
     default:
       break;
