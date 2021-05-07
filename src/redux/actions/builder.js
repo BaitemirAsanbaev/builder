@@ -1,4 +1,4 @@
-import { ADD_NOTE, REMOVE_NOTE, CLEAR_NOTE} from './types';
+import { ADD_NOTE, REMOVE_NOTE, CLEAR_NOTE, LOAD_NOTE} from './types';
 
 export const add = (note) => ({
     type: ADD_NOTE,
@@ -8,6 +8,12 @@ export const add = (note) => ({
 export const remove = () => ({
     type: REMOVE_NOTE,
 });
+
 export const clear = () => ({
     type: CLEAR_NOTE,
+});
+
+export const load = (loadedSong) => ({
+    type: LOAD_NOTE,
+    loadedSong: loadedSong,
 });

@@ -1,6 +1,6 @@
-import { ADD_NOTE, REMOVE_NOTE, CLEAR_NOTE} from '../actions/types'
+import { ADD_NOTE, REMOVE_NOTE, CLEAR_NOTE, LOAD_NOTE} from '../actions/types'
 
-const initialState = ["a", "p", "cd"];
+const initialState = [];
 
 const addNote = (state, action) => {
   const newState = [...state];
@@ -21,6 +21,10 @@ const clearNote = (state) => {
   newState = []
   return newState;
 }
+const loadNote = (action) => {
+  const newState = [...action.loadedSong];
+  return newState;
+}
 
 
 const builderReducer = (state = initialState, action) => {
@@ -36,6 +40,9 @@ const builderReducer = (state = initialState, action) => {
     case CLEAR_NOTE:
       return clearNote(state);
 
+    case LOAD_NOTE:
+      return loadNote(action);
+  
     default:
       break;
   }

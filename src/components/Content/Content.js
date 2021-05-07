@@ -23,6 +23,7 @@ import Songs from "./Songs/Songs";
 import NotFound from "../UI/NotFound/NotFound";
 import Auth from "./Auth/Auth";
 import { useSelector } from "react-redux";
+import { load } from "../../redux/actions/builder";
 const Content = () => {
 
     const notes = useSelector(state => state);
@@ -40,28 +41,28 @@ const Content = () => {
 
 
     function ImportSong(song){
-        // axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
-        //   switch (song) {
-        //     case 'deathnote':
-        //       setNotes(response.data.deathnote)
-        //       break;
-        //     case 'happybday':
-        //       setNotes(response.data.happybday)
-        //       break;
-        //     case 'harrypotter':
-        //       setNotes(response.data.harrypotter)
-        //       break;
-        //     case 'cancan':
-        //       setNotes(response.data.cancan)
-        //       break;
-        //     case 'wellerman':
-        //       setNotes(response.data.wellerman)
-        //       break;
+        axios.get('https://builder-a3cdc-default-rtdb.firebaseio.com/examples.json').then(response =>{
+          switch (song) {
+            case 'deathnote':
+              load(Object.values(response.data.deathnote))
+              break;
+            case 'happybday':
+              load(Object.values(response.data.happybday))
+              break;
+            case 'harrypotter':
+              load(Object.values(response.data.harrypotter))
+              break;
+            case 'cancan':
+              load(Object.values(response.data.cancan))
+              break;
+            case 'wellerman':
+              load(Object.values(response.data.wellerman))
+              break;
               
-        //     default:
-        //       break;
-        //   }
-        // })
+            default:
+              break;
+          }
+        })
     }
 
     let inter;
