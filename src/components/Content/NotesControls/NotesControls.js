@@ -5,8 +5,13 @@ import Button from "../../UI/Button/Button";
 import { useDispatch } from "react-redux";
 import { clear, remove } from "../../../redux/actions/notes";
 
+//component
 const NotesControls = ({ tone, switchTone, notesArray}) => {
+
+    //dispatch constant
     const dispatch = useDispatch();
+
+    //notes which will be contained in buttons
     const result = [];
     const notes = [
         'c',
@@ -18,6 +23,8 @@ const NotesControls = ({ tone, switchTone, notesArray}) => {
         'b',
         'p',
     ];
+
+    //setting every button
     for(const note in notes){
         result.push(<NoteControl
             key = {notes[note]}
@@ -25,6 +32,8 @@ const NotesControls = ({ tone, switchTone, notesArray}) => {
             notes = {notes}
         />)
     }
+
+    //JSX
     return ( 
         <div className = {classes.NotesControls}>
 

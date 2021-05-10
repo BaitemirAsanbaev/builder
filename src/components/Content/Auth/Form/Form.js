@@ -2,7 +2,9 @@ import classes from "./Form.module.css";
 import Button from "../../../UI/Button/Button"
 
 const Form = ({cancel, submit}) => {
+
     return ( <form onSubmit={submit}>
+
         <div className={classes.formdiv}>
             <label htmlFor="">Name</label>
             <input type="text" name="name" id="name" required/>
@@ -12,6 +14,7 @@ const Form = ({cancel, submit}) => {
             <input type="text" name="address" id="address" required/>
             <label htmlFor="">Composition name</label>
             <input type="text" name="compName" id="compName" required/>
+            
             <div className={classes.btndiv}>
                 <Button green="true" mt = 'true'>Checkout</Button>
                 <Button onClick={cancel} red="true" mt = 'true'>Cancel</Button>

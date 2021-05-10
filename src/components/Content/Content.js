@@ -20,7 +20,7 @@ import cb from "../../audio/cb.mp3";
 import {useHistory } from "react-router";
 import { useSelector } from "react-redux";
 
-
+//component
 const Content = () => {
 
 
@@ -122,21 +122,25 @@ const Content = () => {
         i = 0;
     }
 
-  //hides modal window
+    //moves to auth
     function finishOrdering(){
         history.push('/auth')
         setOrdering(false);
     }
 
-
+    //shows modal window
     function startOrdering() {
       setOrdering(true);
     }
   
+    //hides modal window
     function stopOrdering() {
       setOrdering(false);
     }
 
+
+
+  //JSX
     return ( 
         <div className = {classes.Content}>
               <NotesPreview

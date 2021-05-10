@@ -2,12 +2,15 @@ import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
 import Button from "../Button/Button";
 
-
-
+//component
 const Modal = ({ show, cancel, finish, notes, playAll}) => {
+
+  //show/hide toggle
   const style = {
     transform: show ? "translateY(0)" : "translateY(-100vh)",
   };
+
+  //JSX
   return (
     <div className={classes.Modal}>
       <Backdrop show={show} click={cancel} />

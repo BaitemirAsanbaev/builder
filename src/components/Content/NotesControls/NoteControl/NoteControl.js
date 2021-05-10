@@ -13,24 +13,21 @@ import gd from "../../../../audio/gd.mp3";
 import ad from "../../../../audio/ad.mp3";
 import bd from "../../../../audio/bd.mp3";
 import cb from "../../../../audio/cb.mp3";
-// import mp3notes from "../../../../notes";
 import Button from "../../../UI/Button/Button";
 import { useDispatch } from "react-redux";
 import { add } from "../../../../redux/actions/notes";
+
+//component
 const NoteControl = ({ type }) => {
 
+  //dispatch constant
   const dispatch = useDispatch();
 
-
-
-  function play(note){
-  
-    
-
-  
+  //plays note that was pressed
+  function play(note) {
     let relAudio = new Audio();
     relAudio.preload = 'auto';
-// relAudio.src = mp3notes[note];
+    // relAudio.src = mp3notes[note];
     switch (note) {
       case 'c':
         relAudio.src = c;
@@ -99,19 +96,23 @@ const NoteControl = ({ type }) => {
     }
     relAudio.play();
   }
+
+  //converting note labels
   let nota = type;
   if (type.length === 2) {
     nota = type.substring(0, type.length - 1)
   }
 
+  //JSX
   return (<div className={classes.NoteControl}>
-      <Button
-      addbtn = 'true'
-      onClick={()=>{
+    <Button
+      addbtn='true'
+      onClick={() => {
         dispatch(add(type));
-        play(type)}}>
-          {nota}
-      </Button>
+        play(type)
+      }}>
+      {nota}
+    </Button>
   </div>);
 }
 

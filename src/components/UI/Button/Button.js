@@ -1,7 +1,9 @@
-  
 import classes from "./Button.module.css";
 
+//component
 const Button = (props) => {
+
+  //switches button classes
   const className = [classes.Button];
   if(props.order){
     className.push(classes.order)
@@ -24,6 +26,8 @@ const Button = (props) => {
   if(props.mt){
     className.push(classes.mt)
   }
+
+  //JSX
   return (
     <button {...props} className={className.join(" ")}>{props.children}</button>
   );

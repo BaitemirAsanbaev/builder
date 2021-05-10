@@ -1,23 +1,25 @@
 import classes from "./NotesPreview.module.css";
-import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
 
+//component
 const NotesPreview = ({ notes, playAll, setTempo, startOrdering }) => {
 
+  //constant which stores notes
   const result = []
+
   for (const note in notes) {
     result.push(<Notes key={notes[note] + note} type={notes[note]} />)
   }
 
-
+  //JSX
   return (
     <div className={classes.NotesPreview}>
       <div
-        className={classes.sheet}
-        style={{ backgroundImage: `url(${sheet})` }}>
+        className={classes.sheet}>
         {result}
       </div>
+
       <div className={classes.extraPreview}>
         <span className={classes.total}>{notes.length} notes in total</span>
         <div className={classes.tempdiv}>

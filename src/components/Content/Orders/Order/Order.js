@@ -1,13 +1,18 @@
 import classes from "./Order.module.css";
 
+//component
 const Order = ({ name, phone, address, notes, price }) => {
-  const outputIngredients = Object.keys(notes)
-    .map(note => <em>{note} - {notes[note]}</em>);
 
+  //returns notes in order
+  const output = Object.keys(notes)
+    .map(note => <em>{notes[note]} - </em>);
+
+
+  //JSX
   return (
     <div className={classes.Order}>
       <div>{name}, {phone}, {address}</div>
-      <div>{outputIngredients}</div>
+      <div>{output}</div>
       <strong>{price}</strong>
     </div>
   );
