@@ -18,7 +18,7 @@ const Drawer = ({ open, closeDrawer }) => {
       <Backdrop show={open} click={closeDrawer} />
       <div className={drawerClasses.join(' ')}>
         <Logo />
-        <div className={classes.drnavdiv}>
+        <div className={classes.anothernavdiv}>
           <Nav />
         </div>
       </div>
