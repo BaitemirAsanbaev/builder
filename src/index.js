@@ -5,10 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
-import {createStore, applyMiddleware} from 'redux';
-import builderReducer from './redux/reducers/builderReducer';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import notes from './redux/reducers/notes';
 
-const store = createStore(builderReducer, applyMiddleware(thunk))
+const rootReducer =  combineReducers({notes})
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

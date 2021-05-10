@@ -3,7 +3,7 @@ import NoteControl from "./NoteControl/NoteControl";
 import Switch from "./Switch/Switch";
 import Button from "../../UI/Button/Button";
 import { useDispatch } from "react-redux";
-import { clear, remove } from "../../../redux/actions/builder";
+import { clear, remove } from "../../../redux/actions/notes";
 
 const NotesControls = ({ tone, switchTone, notesArray}) => {
     const dispatch = useDispatch();

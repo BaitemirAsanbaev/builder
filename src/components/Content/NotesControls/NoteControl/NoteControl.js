@@ -15,7 +15,7 @@ import bd from "../../../../audio/bd.mp3";
 import cb from "../../../../audio/cb.mp3";
 import Button from "../../../UI/Button/Button";
 import { useDispatch } from "react-redux";
-import { add } from "../../../../redux/actions/builder";
+import { add } from "../../../../redux/actions/notes";
 const NoteControl = ({ type }) => {
 
   const dispatch = useDispatch();

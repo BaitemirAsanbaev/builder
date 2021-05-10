@@ -17,30 +17,28 @@ import gd from "../../audio/gd.mp3";
 import ad from "../../audio/ad.mp3";
 import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
-import axios from "../../axios";
-import { Route, Switch } from "react-router";
+import { Route, Switch, useHistory } from "react-router";
 import Songs from "./Songs/Songs";
 import NotFound from "../UI/NotFound/NotFound";
 import Auth from "./Auth/Auth";
-import { useDispatch, useSelector } from "react-redux";
-import { clear } from "../../redux/actions/builder";
+import { useSelector } from "react-redux";
+import Orders from "./Orders/Orders";
 const Content = () => {
 
-    const notes = useSelector(state => state);
+    const notes = useSelector(state => state.notes);
     
     const [ordering, setOrdering] = useState(false);
 
 
     const [tone, setTone] = useState ("");
 
-
-    const [compName, setCompName] = useState('');
+    // const [compName, setCompName] = useState('');
 
 
     const [temp, setTemp] = useState(4);
 
-    const dispatch = useDispatch();
 
+    const history = useHistory()
 
     let inter;
     let i = 0;
@@ -127,12 +125,8 @@ const Content = () => {
 
 
     function finishOrdering(){
-      axios.post('/order.json', Object.assign({name: compName}, notes)).then(()=>{
-        
+        history.push('/auth')
         setOrdering(false);
-        console.log(ordering);
-        dispatch(clear());
-      })
     }
 
 
@@ -174,6 +168,9 @@ const Content = () => {
             <Route exact path="/auth">
               <Auth/>
             </Route>
+            <Route exact path="/orders">
+              <Orders/>
+            </Route>
 
             <Route exact path="/">
               <NotesPreview
@@ -195,8 +192,7 @@ const Content = () => {
                   show={ordering}
                   cancel={stopOrdering}
                   finish={finishOrdering}
-                  playAll = {playAll}
-                  setName = {setCompName}>
+                  playAll = {playAll}>
                 </Modal>
             </Route>
             <Route path="/" component={NotFound}/>

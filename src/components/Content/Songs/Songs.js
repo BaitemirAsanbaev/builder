@@ -5,7 +5,7 @@ import hp from "../../../images/hp.png"
 import can from "../../../images/can.png"
 import wm from "../../../images/wellerman.png"
 import { Link } from "react-router-dom";
-import { load } from "../../../redux/actions/builder";
+import { load } from "../../../redux/actions/notes";
 
 
 const Songs = () => {
