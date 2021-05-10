@@ -3,7 +3,7 @@ import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
 
-const NotesPreview = ({ notes, playAll, setTemp, startOrdering }) => {
+const NotesPreview = ({ notes, playAll, setTempo, startOrdering }) => {
 
   const result = []
   for (const note in notes) {
@@ -28,7 +28,7 @@ const NotesPreview = ({ notes, playAll, setTemp, startOrdering }) => {
             <span>3/4</span>
             <span>4/4</span>
           </div>
-          <input type="range" max={4} min={1} onInput={(event) => setTemp(event.target.value)} />
+          <input type="range" max={4} min={1} onInput={(event) => setTempo(event.target.value)} />
           <Button onClick={playAll} modalbutton='true' green='true' mt="true">Play</Button>
           <Button disabled={!notes.length} onClick={startOrdering} order='true' mt="true">Order</Button>
         </div>

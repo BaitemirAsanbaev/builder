@@ -1,7 +1,7 @@
 import DrawerOpen from "../Drawer/DrawerOpen/DrawerOpen";
 import Logo from "../../UI/Logo/Logo";
-import Nav from "../../Nav/Nav";
 import classes from "./Toolbar.module.css";
+import Nav from "./Nav/Nav";
 
 const Toolbar = ({openDrawer, closeDrawer}) => {
     return ( 

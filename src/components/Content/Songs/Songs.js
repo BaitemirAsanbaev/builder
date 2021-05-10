@@ -25,7 +25,7 @@ const Songs = () => {
                     </div>
                 </Link>
                 <Link to="/" className={classes.link}>
-                    <div onClick={()=>load('happybday')} className={classes.song + " " + classes.hbd}>
+                    <div onClick={()=>dispatch(load('happybday'))} className={classes.song + " " + classes.hbd}>
                         <div>
                             <h3 className={classes.songTitle}>Happy birthday</h3>
                             <span>Recomended tempo: 3/4</span>
@@ -36,7 +36,7 @@ const Songs = () => {
                     </div>
                 </Link>
                 <Link to="/" className={classes.link}>
-                    <div onClick={()=>load('harrypotter')} className={classes.song + " " + classes.hp}>
+                    <div onClick={()=>dispatch(load('harrypotter'))} className={classes.song + " " + classes.hp}>
                         <div>
                             <h3 className={classes.songTitle}>Harry Potter</h3>
                             <span>Recomended tempo: 2/4</span>
@@ -47,7 +47,7 @@ const Songs = () => {
                     </div>
                 </Link>
                 <Link to="/" className={classes.link}>
-                    <div onClick={()=>load('cancan')} className={classes.song + " " + classes.can}>
+                    <div onClick={()=>dispatch(load('cancan'))} className={classes.song + " " + classes.can}>
                         <div>
                             <h3 className={classes.songTitle}>Cancan</h3>
                             <span>Recomended tempo: 2/4</span>
@@ -58,7 +58,7 @@ const Songs = () => {
                     </div>
                 </Link>
                 <Link to="/" className={classes.link}>
-                    <div onClick={()=>load('wellerman')} className={classes.song + " " + classes.wm}>
+                    <div onClick={()=>dispatch(load('wellerman'))} className={classes.song + " " + classes.wm}>
                         <div>
                             <h3 className={classes.songTitle}>Wellerman</h3>
                             <span>Recomended tempo: 1/4</span>

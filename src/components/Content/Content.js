@@ -17,33 +17,31 @@ import gd from "../../audio/gd.mp3";
 import ad from "../../audio/ad.mp3";
 import bd from "../../audio/bd.mp3";
 import cb from "../../audio/cb.mp3";
-import { Route, Switch, useHistory } from "react-router";
-import Songs from "./Songs/Songs";
-import NotFound from "../UI/NotFound/NotFound";
-import Auth from "./Auth/Auth";
+import {useHistory } from "react-router";
 import { useSelector } from "react-redux";
-import Orders from "./Orders/Orders";
+
+
 const Content = () => {
 
+
+//states
     const notes = useSelector(state => state.notes);
     
     const [ordering, setOrdering] = useState(false);
 
-
     const [tone, setTone] = useState ("");
 
-    // const [compName, setCompName] = useState('');
-
-
-    const [temp, setTemp] = useState(4);
-
+    const [tempo, setTempo] = useState(4);
 
     const history = useHistory()
 
+
+  //functions
+ 
+  // Plays the notes stored in store.
     let inter;
     let i = 0;
 
-    // Plays the notes stored in store.
     function playAll(){
         inter = setInterval(() => {
         const all = new Audio();
@@ -116,43 +114,21 @@ const Content = () => {
         }
         all.play()
         i++
-          }, temp * 100 + 100)
+          }, tempo * 100 + 100)
         
         if(i > notes.length){
           clearInterval(inter)
         }
         i = 0;
     }
-  
 
-
+  //hides modal window
     function finishOrdering(){
         history.push('/auth')
         setOrdering(false);
     }
 
 
-    function switchTone(tonalnost){
-      setTone(tonalnost)
-    }
-
-
-
-    // function addNote(type){
-    //     const newNote = [...notes]
-    //     newNote.push(type)
-    //     setNotes(newNote)
-    // }
-    //   function removeAllNote(){ 
-    //     const newNote = [...notes]
-    //     if (newNote.length !== -1) {
-    //       newNote.splice(-1, 1);
-    //     }
-    //     setNotes(newNote);
-    //   }
-    //   function clearNotes(){
-    //     setNotes([])
-    //   }
     function startOrdering() {
       setOrdering(true);
     }
@@ -163,28 +139,13 @@ const Content = () => {
 
     return ( 
         <div className = {classes.Content}>
-          <Switch>
-            <Route exact path="/songs">
-              <Songs  playAll = {playAll}/>
-            </Route>
-            <Route exact path="/auth">
-              <Auth/>
-            </Route>
-            <Route exact path="/orders">
-              <Orders/>
-            </Route>
-
-            <Route exact path="/">
               <NotesPreview
                   notes = {notes}
                   playAll = {playAll}
-                  setTemp = {setTemp}
+                  setTempo = {setTempo}
                   startOrdering = {startOrdering}/>
               <NotesControls 
-                  // addNote = {addNote}
-                  // removeAllNote = {removeAllNote}
-                  // clearNotes ={clearNotes}
-                  switchTone = {switchTone}
+                  switchTone = {setTone}
                   tone = {tone}
                   notesArray = {notes}
                   startOrdering = {startOrdering}
@@ -196,10 +157,6 @@ const Content = () => {
                   finish={finishOrdering}
                   playAll = {playAll}>
                 </Modal>
-            </Route>
-            <Route path="/" component={NotFound}/>
-          </Switch>
-
         </div>
      );
 }
