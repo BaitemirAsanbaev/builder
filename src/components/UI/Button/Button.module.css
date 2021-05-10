@@ -7,7 +7,7 @@
     font-size: 26px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color .5s;
+    transition: background-color .5s, box-shadow .2s;
   }
   .addbtn{
     text-align: center;
