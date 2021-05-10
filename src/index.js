@@ -7,8 +7,9 @@ import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import notes from './redux/reducers/notes';
+import orders from './redux/reducers/orders';
 
-const rootReducer =  combineReducers({notes})
+const rootReducer =  combineReducers({notes, orders})
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 

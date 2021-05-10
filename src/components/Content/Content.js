@@ -42,6 +42,8 @@ const Content = () => {
 
     let inter;
     let i = 0;
+
+    // Plays the notes stored in store.
     function playAll(){
         inter = setInterval(() => {
         const all = new Audio();

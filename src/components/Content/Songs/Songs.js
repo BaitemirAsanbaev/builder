@@ -6,12 +6,15 @@ import can from "../../../images/can.png"
 import wm from "../../../images/wellerman.png"
 import { Link } from "react-router-dom";
 import { load } from "../../../redux/actions/notes";
+import { useDispatch } from "react-redux";
 
 
 const Songs = () => {
+    const dispatch = useDispatch();
+
     return ( <div className={classes.Songs}>
                 <Link to="/" className={classes.link}>
-                    <div onClick={()=>load('deathnote')} className={classes.song + " " + classes.l}>
+                    <div onClick={()=>dispatch(load('deathnote'))} className={classes.song + " " + classes.l}>
                         <div>
                             <h3 className={classes.songTitle}>L's theme</h3>
                             <span>Recomended tempo: 1/4</span>

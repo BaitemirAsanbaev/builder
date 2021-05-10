@@ -2,7 +2,8 @@
 import Nav from "../../Nav/Nav";
 import Logo from "../../UI/Logo/Logo";
 import classes from "./Drawer.module.css";
-import Backdrop from "../../UI/Backdrop/Backdrop"
+import Backdrop from "../../UI/Backdrop/Backdrop";
+
 const Drawer = ({open, closeDrawer}) => {
     const drawerClasses = [
         classes.content,
@@ -13,7 +14,7 @@ const Drawer = ({open, closeDrawer}) => {
         <div className = {classes.Drawer}>
             <Backdrop show = {open} click = {closeDrawer}/>
             <div className = {drawerClasses.join(' ')}>
-                <Logo/>
+                <Logo />
                 <div className={classes.drnavdiv}>                    
                     <Nav/>
                 </div>
