@@ -9,7 +9,7 @@ const Orders = () => {
   
     useEffect(() => {
       dispatch(load());
-    }, []);
+    }, [dispatch]);
   
     const results = orders.map(order => <Order key={order.id} {...order} />);
   
