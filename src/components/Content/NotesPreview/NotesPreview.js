@@ -1,4 +1,5 @@
 import classes from "./NotesPreview.module.css";
+import sheet from "../../../images/sheet.png";
 import Notes from "../Notes/Notes"
 import Button from "../../UI/Button/Button";
 
@@ -16,10 +17,10 @@ const NotesPreview = ({ notes, playAll, setTempo, startOrdering }) => {
   return (
     <div className={classes.NotesPreview}>
       <div
-        className={classes.sheet}>
+        className={classes.sheet}
+        style={{ backgroundImage: `url(${sheet})` }}>
         {result}
       </div>
-
       <div className={classes.extraPreview}>
         <span className={classes.total}>{notes.length} notes in total</span>
         <div className={classes.tempdiv}>
