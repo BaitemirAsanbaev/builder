@@ -8,8 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import notes from './redux/reducers/notes';
 import orders from './redux/reducers/orders';
+import auth from './redux/reducers/auth';
 
-const rootReducer =  combineReducers({notes, orders})
+const rootReducer =  combineReducers({notes, orders, auth})
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 

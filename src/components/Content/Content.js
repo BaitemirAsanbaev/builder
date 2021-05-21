@@ -25,6 +25,9 @@ const Content = () => {
 
 
 //states
+
+    const isAuthenticated = useSelector(state => state.auth.token !== null);
+
     const notes = useSelector(state => state.notes);
     
     const [ordering, setOrdering] = useState(false);
@@ -130,7 +133,13 @@ const Content = () => {
 
     //shows modal window
     function startOrdering() {
-      setOrdering(true);
+      if(isAuthenticated){
+        setOrdering(true);
+      }
+      else{
+        history.push('./authent')
+      }
+
     }
   
     //hides modal window

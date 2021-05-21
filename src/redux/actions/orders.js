@@ -6,8 +6,8 @@ export const set = (orders) => ({
   orders: orders
 });
 
-export const load = () => {
-  return (dispatch) => axios.get('/orders.json')
+export const load = (token, id) => {
+  return (dispatch) => axios.get('/orders.json?authent=' + token + '&orderBy="userID"&eualTo="' + id + '"')
     .then(response => {
       const newOrders = Object.keys(response.data).map(id => {
         return {

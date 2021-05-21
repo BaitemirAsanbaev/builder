@@ -8,6 +8,8 @@ import { clear } from "../../../redux/actions/notes";
 //component
 const Auth = () => {
 
+
+  const {token, id} = useSelector(state => state.auth)
   //dispatch and selector constants
   const dispatch = useDispatch();
   const notes = useSelector(state => state.notes)
@@ -23,12 +25,13 @@ const Auth = () => {
   //submit function
   function submitCallback(event) {
     const data = new FormData(event.target);
-    axios.post('/orders.json', Object.assign({
+    axios.post('/orders.json?authent' + token, Object.assign({
       name: data.get('name'),
       address: data.get('address'),
       phone: data.get('phone'),
       composition_name: data.get('compName'),
       notes: notes,
+      userID: id
     })
     ).then(() => {
       history.replace('/');

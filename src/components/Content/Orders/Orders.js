@@ -10,11 +10,12 @@ const Orders = () => {
     //dispatch and selector constants
     const dispatch = useDispatch();
     const orders = useSelector(state => state.orders);
+    const {token, id} = useSelector(state => state.auth);
 
     //loads orders
     useEffect(() => {
-      dispatch(load());
-    }, [dispatch]);
+      dispatch(load(token, id));
+    }, [dispatch, token, id]);
     
     //cpntains orders into result
     const results = orders.map(order => <Order key={order.id} {...order} />);
