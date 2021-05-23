@@ -1,0 +1,18 @@
+.Authent form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+.Authent h1{
+  margin-bottom: 20px;
+}
+.Authent input{
+  margin: 10px 0px;
+}
+.authbtns button{
+  margin: 10px;
+}
+.authbtns button:hover{
+  background-color: rgb(158, 0, 0)!important;
+}

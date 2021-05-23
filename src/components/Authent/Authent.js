@@ -23,11 +23,13 @@ export default function Authent () {
   if (!loading) {
     formOutput = (
       <form onSubmit={formSubmitted}>
-        <h1>Welcome</h1>
+        <h1>Log in to get more expirience</h1>
         <input type="email" placeholder="E-mail" name="email" required />
         <input type="password" placeholder="Password" name="password" required minLength="6" />
-        <Button onClick={() => setMethod('signin')} green>Sign in</Button>
-        <Button onClick={() => setMethod('signup')} red>Sign up</Button>
+        <div className={classes.authbtns}>
+          <Button onClick={() => setMethod('signin')} >Sign in</Button>
+          <Button onClick={() => setMethod('signup')} >Sign up</Button>
+        </div>
       </form>
     );
   }
@@ -44,7 +46,7 @@ export default function Authent () {
   }
 
   return (
-    <div className={classes.Auth}>
+    <div className={classes.Authent}>
       {errorOutput}
       {formOutput}
       {redirectOutput}
