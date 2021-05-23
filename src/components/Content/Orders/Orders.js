@@ -15,7 +15,7 @@ const Orders = () => {
     //loads orders
     useEffect(() => {
       dispatch(load(token, id));
-    }, [dispatch, token, id]);
+    }, [dispatch, id, token]);
     
     //cpntains orders into result
     const results = orders.map(order => <Order key={order.id} {...order} />);
