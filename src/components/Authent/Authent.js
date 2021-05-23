@@ -19,7 +19,6 @@ export default function Authent () {
 
     event.preventDefault();
   }
-  console.log(error)
   let formOutput = "Loading...";
   if (!loading) {
     formOutput = (
