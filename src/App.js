@@ -7,6 +7,12 @@ import { useEffect } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import { restore } from "./redux/actions/auth";
 import Logout from "./components/Logout/Logout";
+import Songs from "./components/Content/Songs/Songs"
+import Auth from "./components/Content/Auth/Auth"
+import Orders from "./components/Content/Orders/Orders"
+import NotFound from "./components/UI/NotFound/NotFound"
+import Content from "./components/Content/Content"
+
 function App() {
 
   const dispatch = useDispatch();
@@ -24,9 +30,13 @@ function App() {
   if (isAuthenticated) {
     routesOutput = (
       <Switch>
-        <Route path="/" exact component={Builder} />
         <Route path="/authent" component={Authent} />
         <Route path="/logout" component={Logout} />
+        <Route exact path="/songs" component={Songs} />
+        <Route exact path="/auth" component={Auth} />
+        <Route exact path="/orders" component={Orders} />
+        <Route exact path="/" component={Content}/>
+        <Route path="/" component={NotFound}/>
         <Redirect to="/" />
       </Switch>
     );
