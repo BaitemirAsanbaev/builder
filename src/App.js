@@ -1,6 +1,5 @@
 import Layout from "./components/Layout/Layout";
 import "./App.css"
-import Builder from "./components/Builder/Builder";
 import Authent from "./components/Authent/Authent";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -22,7 +21,7 @@ function App() {
 
   let routesOutput = (
     <Switch>
-      <Route path="/" exact component={Builder} />
+      <Route path="/" exact component={Content} />
       <Route path="/authent" component={Authent} />
       <Redirect to="/" />
     </Switch>
