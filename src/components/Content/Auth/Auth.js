@@ -25,7 +25,7 @@ const Auth = () => {
   //submit function
   function submitCallback(event) {
     const data = new FormData(event.target);
-    axios.post('/orders.json?authent' + token, Object.assign({
+    axios.post('/orders.json?auth=' + token, Object.assign({
       name: data.get('name'),
       address: data.get('address'),
       phone: data.get('phone'),
