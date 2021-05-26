@@ -5,7 +5,7 @@ const Order = ({ name, phone, address, notes, composition_name }) => {
 
   //returns notes in order
   const output = Object.keys(notes)
-    .map(note => <em className={classes.notes}>{notes[note]} - </em>);
+    .map(note => <em key={note} className={classes.notes}>{notes[note]} - </em>);
 
 
   //JSX

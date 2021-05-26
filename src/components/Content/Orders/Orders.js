@@ -17,9 +17,9 @@ const Orders = () => {
       dispatch(load(token, id));
     }, [dispatch, id, token]);
     
-    //cpntains orders into result
+    //contains orders into result
     const results = orders.map(order => <Order key={order.id} {...order} />);
-  
+    
 
     //JSX
     return (

@@ -31,7 +31,7 @@ const Auth = () => {
       phone: data.get('phone'),
       composition_name: data.get('compName'),
       notes: notes,
-      userID: id
+      userId: id
     })
     ).then(() => {
       history.replace('/');
